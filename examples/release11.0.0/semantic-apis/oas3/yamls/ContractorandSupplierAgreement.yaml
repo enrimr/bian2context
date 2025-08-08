@@ -1,0 +1,1534 @@
+openapi: 3.0.1
+info:
+  title: Contractor and Supplier Agreement
+  description: This Service Domain maintains appropriate supplier agreements/contracts
+  contact:
+    name: BIAN
+    url: https://bian.org
+  version: 11.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/BIAN-3/BIAN/ContractorandSupplierAgreement/11.0.0
+paths:
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Control':
+    put:
+      tags:
+        - CR - SupplierAgreement
+      summary: Control Supplier Agreement
+      description: Control Supplier Agreement
+      operationId: Control
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      requestBody:
+        $ref: '#/components/requestBodies/SupplierAgreement'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /ContractorandSupplierAgreement/Evaluate:
+    post:
+      tags:
+        - CR - SupplierAgreement
+      summary: Evaluate Supplier Agreement
+      description: Evaluate Supplier Agreement
+      operationId: Evaluate
+      requestBody:
+        $ref: '#/components/requestBodies/SupplierAgreement'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Exchange':
+    put:
+      tags:
+        - CR - SupplierAgreement
+      summary: Exchange Supplier Agreement
+      description: Exchange Supplier Agreement
+      operationId: Exchange
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      requestBody:
+        $ref: '#/components/requestBodies/SupplierAgreement'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Grant':
+    put:
+      tags:
+        - CR - SupplierAgreement
+      summary: Grant Supplier Agreement
+      description: Grant Supplier Agreement
+      operationId: Grant
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      requestBody:
+        $ref: '#/components/requestBodies/SupplierAgreement'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Notify':
+    get:
+      tags:
+        - CR - SupplierAgreement
+      summary: Notify Supplier Agreement
+      description: Notify Supplier Agreement
+      operationId: Notify
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Request':
+    put:
+      tags:
+        - CR - SupplierAgreement
+      summary: Request Supplier Agreement
+      description: Request Supplier Agreement
+      operationId: Request
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      requestBody:
+        $ref: '#/components/requestBodies/SupplierAgreement'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Retrieve':
+    get:
+      tags:
+        - CR - SupplierAgreement
+      summary: Retrieve Supplier Agreement
+      description: Retrieve Supplier Agreement
+      operationId: Retrieve
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/Update':
+    put:
+      tags:
+        - CR - SupplierAgreement
+      summary: Update Supplier Agreement
+      description: Update Supplier Agreement
+      operationId: Update
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+      requestBody:
+        $ref: '#/components/requestBodies/SupplierAgreement'
+      responses:
+        '200':
+          $ref: '#/components/responses/SupplierAgreement'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/LegalTerm/{legaltermid}/Evaluate':
+    post:
+      tags:
+        - BQ - LegalTerm
+      summary: Evaluate Legal Term
+      description: Evaluate Legal Term
+      operationId: EvaluateLegalTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/legaltermid'
+      requestBody:
+        $ref: '#/components/requestBodies/LegalTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/LegalTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/PolicyTerm/{policytermid}/Evaluate':
+    post:
+      tags:
+        - BQ - PolicyTerm
+      summary: Evaluate Policy Term
+      description: Evaluate Policy Term
+      operationId: EvaluatePolicyTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/policytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/PolicyTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/PolicyTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/RegulatoryTerm/{regulatorytermid}/Evaluate':
+    post:
+      tags:
+        - BQ - RegulatoryTerm
+      summary: Evaluate Regulatory Term
+      description: Evaluate Regulatory Term
+      operationId: EvaluateRegulatoryTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/regulatorytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/RegulatoryTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/RegulatoryTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/LegalTerm/{legaltermid}/Exchange':
+    put:
+      tags:
+        - BQ - LegalTerm
+      summary: Exchange Legal Term
+      description: Exchange Legal Term
+      operationId: ExchangeLegalTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/legaltermid'
+      requestBody:
+        $ref: '#/components/requestBodies/LegalTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/LegalTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/PolicyTerm/{policytermid}/Exchange':
+    put:
+      tags:
+        - BQ - PolicyTerm
+      summary: Exchange Policy Term
+      description: Exchange Policy Term
+      operationId: ExchangePolicyTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/policytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/PolicyTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/PolicyTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/RegulatoryTerm/{regulatorytermid}/Exchange':
+    put:
+      tags:
+        - BQ - RegulatoryTerm
+      summary: Exchange Regulatory Term
+      description: Exchange Regulatory Term
+      operationId: ExchangeRegulatoryTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/regulatorytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/RegulatoryTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/RegulatoryTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/LegalTerm/{legaltermid}/Notify':
+    get:
+      tags:
+        - BQ - LegalTerm
+      summary: Notify Legal Term
+      description: Notify Legal Term
+      operationId: NotifyLegalTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/legaltermid'
+      responses:
+        '200':
+          $ref: '#/components/responses/LegalTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/PolicyTerm/{policytermid}/Notify':
+    get:
+      tags:
+        - BQ - PolicyTerm
+      summary: Notify Policy Term
+      description: Notify Policy Term
+      operationId: NotifyPolicyTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/policytermid'
+      responses:
+        '200':
+          $ref: '#/components/responses/PolicyTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/RegulatoryTerm/{regulatorytermid}/Notify':
+    get:
+      tags:
+        - BQ - RegulatoryTerm
+      summary: Notify Regulatory Term
+      description: Notify Regulatory Term
+      operationId: NotifyRegulatoryTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/regulatorytermid'
+      responses:
+        '200':
+          $ref: '#/components/responses/RegulatoryTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/LegalTerm/{legaltermid}/Request':
+    put:
+      tags:
+        - BQ - LegalTerm
+      summary: Request Legal Term
+      description: Request Legal Term
+      operationId: RequestLegalTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/legaltermid'
+      requestBody:
+        $ref: '#/components/requestBodies/LegalTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/LegalTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/PolicyTerm/{policytermid}/Request':
+    put:
+      tags:
+        - BQ - PolicyTerm
+      summary: Request Policy Term
+      description: Request Policy Term
+      operationId: RequestPolicyTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/policytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/PolicyTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/PolicyTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/RegulatoryTerm/{regulatorytermid}/Request':
+    put:
+      tags:
+        - BQ - RegulatoryTerm
+      summary: Request Regulatory Term
+      description: Request Regulatory Term
+      operationId: RequestRegulatoryTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/regulatorytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/RegulatoryTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/RegulatoryTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/LegalTerm/{legaltermid}/Retrieve':
+    get:
+      tags:
+        - BQ - LegalTerm
+      summary: Retrieve Legal Term
+      description: Retrieve Legal Term
+      operationId: RetrieveLegalTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/legaltermid'
+      responses:
+        '200':
+          $ref: '#/components/responses/LegalTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/PolicyTerm/{policytermid}/Retrieve':
+    get:
+      tags:
+        - BQ - PolicyTerm
+      summary: Retrieve Policy Term
+      description: Retrieve Policy Term
+      operationId: RetrievePolicyTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/policytermid'
+      responses:
+        '200':
+          $ref: '#/components/responses/PolicyTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/RegulatoryTerm/{regulatorytermid}/Retrieve':
+    get:
+      tags:
+        - BQ - RegulatoryTerm
+      summary: Retrieve Regulatory Term
+      description: Retrieve Regulatory Term
+      operationId: RetrieveRegulatoryTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/regulatorytermid'
+      responses:
+        '200':
+          $ref: '#/components/responses/RegulatoryTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/LegalTerm/{legaltermid}/Update':
+    put:
+      tags:
+        - BQ - LegalTerm
+      summary: Update Legal Term
+      description: Update Legal Term
+      operationId: UpdateLegalTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/legaltermid'
+      requestBody:
+        $ref: '#/components/requestBodies/LegalTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/LegalTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/PolicyTerm/{policytermid}/Update':
+    put:
+      tags:
+        - BQ - PolicyTerm
+      summary: Update Policy Term
+      description: Update Policy Term
+      operationId: UpdatePolicyTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/policytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/PolicyTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/PolicyTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ContractorandSupplierAgreement/{contractorandsupplieragreementid}/RegulatoryTerm/{regulatorytermid}/Update':
+    put:
+      tags:
+        - BQ - RegulatoryTerm
+      summary: Update Regulatory Term
+      description: Update Regulatory Term
+      operationId: UpdateRegulatoryTerm
+      parameters:
+        - $ref: '#/components/parameters/contractorandsupplieragreementid'
+        - $ref: '#/components/parameters/regulatorytermid'
+      requestBody:
+        $ref: '#/components/requestBodies/RegulatoryTerm'
+      responses:
+        '200':
+          $ref: '#/components/responses/RegulatoryTerm'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+          format: string
+        status:
+          type: string
+          format: string
+        message:
+          type: string
+          format: string
+      description: Status Attributes
+    condition:
+      type: object
+      properties:
+        Condition:
+          type: string
+          description: "Condition is a premise upon which the fulfillment of an agreement depends \n\nGeneral and special arrangements, provisions, requirements, rules, specifications, and standards that form an integral part of an agreement or contract.\n\nRead more: http://www.businessdictionary.com/definition/terms-and-conditions.html\n\n"
+          format: class
+      description: The required status/situation for the terms to apply and or tasks that need to be completed prior to the initiation of the workstep
+    schedule:
+      type: object
+      properties:
+        ScheduleType:
+          type: string
+          description: ''
+          format: string
+      description: Any timing/duration considerations applying to the Regulatory Term
+    name:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: 'A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT)'
+          format: datatype
+      description: ''
+    businessservicetypevalues:
+      type: object
+      properties:
+        Businessservicetypevalues:
+          type: string
+          description: ''
+          format: enumeration
+      description: ''
+    text:
+      type: object
+      properties:
+        Text:
+          type: string
+          description: Text is a character string such as a finite set of characters generally in the form of words of a language. (UN/CEFACT)
+          format: datatype
+      description: ''
+    businessservice:
+      type: object
+      properties:
+        BusinessServiceName:
+          $ref: '#/components/schemas/name'
+        BusinessServiceType:
+          $ref: '#/components/schemas/businessservicetypevalues'
+        BusinessServiceDescription:
+          $ref: '#/components/schemas/text'
+      description: The Regulatory Term specific Business Service
+    date:
+      type: object
+      properties:
+        DateContent:
+          type: string
+          description: ''
+          format: string
+      description: Date on which the agreement was signed by all parties. (ISO20022)
+    agreementtypevalues:
+      enum:
+        - CustomerAgreement
+        - SupplierAgreement
+        - BrokerAgreement
+        - SalesAgreement
+        - PurchaseAgreement
+        - MaintenanceAgreement
+        - ProductAgreement
+        - ProductSalesAgreement
+        - ResourceAgreement
+      type: string
+      description: ">\n* `CustomerAgreement` - \n* `SupplierAgreement` - \n* `BrokerAgreement` - \n* `SalesAgreement` - \n* `PurchaseAgreement` - \n* `MaintenanceAgreement` - \n* `ProductAgreement` - \n* `ProductSalesAgreement` - \n* `ResourceAgreement` - \n"
+    datetime:
+      type: object
+      properties:
+        DateTimeContent:
+          type: string
+          description: ''
+          format: string
+        TimeZoneCode:
+          type: string
+          description: ''
+          format: string
+        DaylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: Date and time at which the range starts. (ISO20022)
+    datetimeperiod:
+      type: object
+      properties:
+        FromDateTime:
+          $ref: '#/components/schemas/datetime'
+        ToDateTime:
+          $ref: '#/components/schemas/datetime'
+      description: "Period during which the agreement is valid\n"
+    partytypevalues:
+      enum:
+        - Person
+        - Organisation
+      type: string
+      description: ">\n* `Person` - Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). ISO20022\n* `Organisation` - Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution. ISO20022\n"
+    value:
+      type: object
+      properties:
+        Value:
+          type: string
+          description: 'A value is the concept of worth in general that is assigned or is determined by measurement, assessment or calculation. (UN/CEFACT)'
+          format: datatype
+      description: ''
+    identifier:
+      type: object
+      properties:
+        IdentifierValue:
+          $ref: '#/components/schemas/value'
+        IdentifierIssuingAuthority:
+          $ref: '#/components/schemas/involvedparty'
+        IdentifierStartDate:
+          $ref: '#/components/schemas/datetime'
+        IdentifierEndDate:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyidentification:
+      type: object
+      properties:
+        PartyIdentificationType:
+          type: string
+          description: ''
+          format: partyidentificationtypevalues
+        PartyIdentification:
+          $ref: '#/components/schemas/identifier'
+      description: ''
+    party:
+      type: object
+      properties:
+        PartyName:
+          $ref: '#/components/schemas/name'
+        PartyType:
+          $ref: '#/components/schemas/partytypevalues'
+        PartyDateTime:
+          $ref: '#/components/schemas/datetime'
+        PartyIdentification:
+          $ref: '#/components/schemas/partyidentification'
+      description: ''
+    partyinvolvementtypevalues:
+      enum:
+        - Agreementinvolvement
+        - Partyinvolvement
+        - Arrangementinvolvement
+        - Designspecificationinvolvement
+        - Relationshipinvolvement
+        - Locationinvolvement
+        - Bankguaranteeinvolvement
+      type: string
+      description: ">\n* `Agreementinvolvement` - \n* `Partyinvolvement` - \n* `Arrangementinvolvement` - \n* `Designspecificationinvolvement` - \n* `Relationshipinvolvement` - \n* `Locationinvolvement` - \n* `Bankguaranteeinvolvement` - \n"
+    partyrole:
+      type: object
+      properties:
+        PartyRoleType:
+          $ref: '#/components/schemas/text'
+        PartyRoleName:
+          $ref: '#/components/schemas/name'
+        PartyRoleValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        PartyInvolvementType:
+          $ref: '#/components/schemas/partyinvolvementtypevalues'
+      description: ''
+    involvedparty:
+      type: object
+      properties:
+        PartyReference:
+          $ref: '#/components/schemas/party'
+        PartyInvolvement:
+          $ref: '#/components/schemas/partyrole'
+      description: Party who plays a  specific role in the context of assigning a status.
+    status:
+      type: object
+      properties:
+        StatusReason:
+          $ref: '#/components/schemas/text'
+        StatusDateTime:
+          $ref: '#/components/schemas/datetime'
+        StatusValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        StatusInvolvedParty:
+          $ref: '#/components/schemas/involvedparty'
+      description: ''
+    agreementlifecyclestatus:
+      type: object
+      properties:
+        AgreementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        AgreementLifecycleStatusType:
+          type: string
+          description: ''
+          format: agreementlifecyclestatustypevalues
+      description: 'A characteristic of agreement which refers to the LifecycleStatus of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).'
+    agreement:
+      type: object
+      properties:
+        AgreementSignedDate:
+          $ref: '#/components/schemas/date'
+        AgreementType:
+          $ref: '#/components/schemas/agreementtypevalues'
+        AgreementValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        AgreementVersion:
+          $ref: '#/components/schemas/text'
+        AgreementStatus:
+          $ref: '#/components/schemas/agreementlifecyclestatus'
+        AgreementSubjectMatter:
+          $ref: '#/components/schemas/text'
+        AgreementIdentification:
+          $ref: '#/components/schemas/identifier'
+        AgreementDate:
+          $ref: '#/components/schemas/datetime'
+      description: Reference to Regulatory Term
+    actiontypevalues:
+      enum:
+        - Initiate
+        - Execute
+        - Create
+        - Transfer
+        - Pay
+        - Deliver
+        - Apply
+        - Calculate
+      type: string
+      description: ">\n* `Initiate` - \n* `Execute` - \n* `Create` - \n* `Transfer` - \n* `Pay` - \n* `Deliver` - \n* `Apply` - \n* `Calculate` - \n"
+    action:
+      type: object
+      properties:
+        ActionType:
+          $ref: '#/components/schemas/actiontypevalues'
+      description: ''
+    arrangementlifecyclestatus:
+      type: object
+      properties:
+        ArrangementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ArrangementLifecycleStatusType:
+          type: string
+          description: ''
+          format: arrangementlifecyclestatustypevalues
+      description: 'A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.)'
+    subject:
+      type: object
+      properties:
+        Subject:
+          type: string
+          description: A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.
+          format: class
+      description: ''
+    arrangementtypevalues:
+      enum:
+        - SweepArrangement
+        - WithdrawalArrangement
+        - DepositArrangement
+        - InterestArrangement
+        - FeeArrangement
+        - LienArrangement
+        - InformationArrangement
+        - PaymentServiceArrangement
+        - EntitlementArrangement
+        - PeriodArrangement
+        - CollateralArrangement
+        - LimitArrangement
+        - AccessArrangement
+        - CardPaymentArrangement
+        - StandingOrderArrangement
+        - OverdraftArrangement
+        - RepaymentArrangement
+        - StatementArrangement
+        - CreditTransferArrangement
+        - ProductAndServiceArrangement
+        - FactoringArrangement
+        - RolloverArrangement
+      type: string
+      description: ">\n* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.\n* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. \n* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. \n* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.\n* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. \n* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. \n* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account\n* `PaymentServiceArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. \n* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement\n* `PeriodArrangement` - \n* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. \n* `LimitArrangement` - An arrangement to limit something\ne.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. \n* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point\n* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. \n* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. \n* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. \n* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. \n* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. \n* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. \n* `ProductAndServiceArrangement` - \n* `FactoringArrangement` - \n* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement\n\ni.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer \n"
+    arrangement:
+      type: object
+      properties:
+        ArrangementAction:
+          $ref: '#/components/schemas/action'
+        ArrangementStartDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementEndDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementStatus:
+          $ref: '#/components/schemas/arrangementlifecyclestatus'
+        ArrangementSubjectMatter:
+          $ref: '#/components/schemas/subject'
+        Arrangementtype:
+          $ref: '#/components/schemas/arrangementtypevalues'
+      description: Reference to Regulatory Term
+    RegulatoryTerm:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        SupplierAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        RegulatoryTermReference:
+          $ref: '#/components/schemas/arrangement'
+        RegulatoryTermType:
+          $ref: '#/components/schemas/text'
+        RegulatoryAuthority:
+          type: string
+          description: The applicable regulatory authority
+          format: string
+        ApplicableRegulationReference:
+          type: string
+          description: Reference to any regulatory requirements
+          format: object
+        ApplicableRegulationInterpretation:
+          type: string
+          description: Explanation or interpretation of the regulation as applied
+          format: string
+      description: Covers the regulatory considerations of the agreement
+    PolicyTerm:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        SupplierAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        PolicyTermReference:
+          $ref: '#/components/schemas/arrangement'
+        PolicyTermType:
+          $ref: '#/components/schemas/text'
+        BankPolicy-RuleType:
+          type: string
+          description: The type of bank policy referenced (e.g. staff certification)
+          format: string
+        ApplicableBankPolicy-RuleReference:
+          type: string
+          description: Reference to the bank's policies or rules
+          format: object
+        ApplicableBankPolicy-RuleInterpretation:
+          type: string
+          description: Explanation or interpretation of the policy or rule as applied
+          format: string
+      description: Covers the regulatory considerations of the agreement
+    LegalTerm:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        SupplierAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        LegalTermReference:
+          $ref: '#/components/schemas/arrangement'
+        LegalTermType:
+          $ref: '#/components/schemas/text'
+        Jurisdiction:
+          type: string
+          description: The legal jurisdiction
+          format: string
+        ApplicableLawReference:
+          type: string
+          description: Reference to any legal requirements
+          format: object
+        ApplicableLawInterpretation:
+          type: string
+          description: Explanation or interpretation of the law as applied
+          format: string
+      description: Covers the regulatory considerations of the agreement
+    workproduct:
+      type: object
+      properties:
+        WorkProductType:
+          type: string
+          description: ''
+          format: workproducttypevalues
+        WorkProductIdentifoication:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    ContractorandSupplierAgreementOutcome:
+      type: object
+      properties:
+        ContractorandSupplierAgreementAgreement:
+          $ref: '#/components/schemas/agreement'
+        ContractorandSupplierAgreementWorkProduct:
+          $ref: '#/components/schemas/workproduct'
+        ContractorandSupplierAgreementWorkProductType:
+          type: string
+          description: ''
+          format: workproducttypevalues
+      description: Covers the regulatory considerations of the agreement
+    feature:
+      type: object
+      properties:
+        FeatureType:
+          type: string
+          description: ''
+          format: string
+      description: 'A selected optional feature in a product, identified by Parameter Type'
+    instructiondate:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/date'
+        InstructionDateType:
+          type: string
+          description: ''
+          format: instructiondatetypevalues
+      description: ''
+    instructionlifecyclestatus:
+      type: object
+      properties:
+        InstructionLifecycleStatusType:
+          type: string
+          description: ''
+          format: instructionlifecylestatustypevalues
+        InstructionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+      description: 'A characteristic of instruction which refers to the LifecycleStatus of instruction (e.g., requested, executed, fulfilled, etc.); '
+    instructionidentification:
+      type: object
+      properties:
+        InstructionIdentifier:
+          $ref: '#/components/schemas/identifier'
+        InstructionIdentifierType:
+          type: string
+          description: ''
+          format: instructionidentificationtypevalues
+      description: "An identifier that allows to uniquely refer to an instance of an Instruction.\n"
+    instructiontypevalues:
+      enum:
+        - PaymentInstruction
+        - DeliveryOrder
+        - InformationRequest
+        - ExchangeInstruction
+        - AllocationInstruction
+        - MaintenanceInstruction
+      type: string
+      description: ">\n* `PaymentInstruction` - \n* `DeliveryOrder` - \n* `InformationRequest` - \n* `ExchangeInstruction` - \n* `AllocationInstruction` - \n* `MaintenanceInstruction` - \n"
+    log:
+      type: object
+      properties:
+        LogType:
+          type: string
+          description: ''
+          format: string
+        LogPeriod:
+          type: string
+          description: ''
+          format: string
+        LogDate:
+          type: string
+          description: Key dates associated with the log (e.g. start time).
+          format: string
+        LogIdentification:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instruction:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/instructiondate'
+        InstructionStatus:
+          $ref: '#/components/schemas/instructionlifecyclestatus'
+        InstructionIdentifier:
+          $ref: '#/components/schemas/instructionidentification'
+        InstructionType:
+          $ref: '#/components/schemas/instructiontypevalues'
+        InstructionResult:
+          $ref: '#/components/schemas/text'
+        InstructionDescription:
+          $ref: '#/components/schemas/text'
+        InstructionLog:
+          $ref: '#/components/schemas/log'
+        InstructionPurpose:
+          $ref: '#/components/schemas/text'
+      description: Request to discharge Supplier Agreement
+    rulesettype:
+      type: object
+      properties:
+        RuleSetTypeName:
+          $ref: '#/components/schemas/name'
+        RuleSetType:
+          type: string
+          description: ''
+          format: rulesettypevalues
+      description: ''
+    ruleset:
+      type: object
+      properties:
+        RuleSetDefinition:
+          $ref: '#/components/schemas/text'
+        RuleSetInterpretation:
+          $ref: '#/components/schemas/text'
+        RuleSetType:
+          $ref: '#/components/schemas/rulesettype'
+        RuleSetName:
+          $ref: '#/components/schemas/name'
+        RuleSetIdentification:
+          $ref: '#/components/schemas/identifier'
+        RuleSetLifecycleStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to the regulation which is defined in Supplier Agreement
+    jurisdiction:
+      type: object
+      properties:
+        Jurisdiction:
+          type: string
+          description: Jurisdiction that will be assigned in case of legal dispute.
+          format: class
+      description: Reference to the jurisdiction that is assigned to Supplier Agreement in case of legal dispute.
+    accountstatus:
+      type: object
+      properties:
+        AccountStatus:
+          $ref: '#/components/schemas/status'
+        AccountStatusType:
+          type: string
+          description: ''
+          format: accountstatustypevalues
+      description: "A characteristic of account which refers to the LifecycleStatus of account like opened, closed, blocked, etc.\n\nSpecifies the current state of an account. (ISO20022)"
+    accountidentification:
+      type: object
+      properties:
+        AccountIdentificationType:
+          type: string
+          description: ''
+          format: accountidentificationtypevalues
+        AccountIdentification:
+          $ref: '#/components/schemas/identifier'
+      description: The identifier of account like Account Number.
+    accountdate:
+      type: object
+      properties:
+        AccountDateType:
+          type: string
+          description: ''
+          format: accountdatetypevalues
+        AccountDate:
+          $ref: '#/components/schemas/datetime'
+      description: 'A characteristic of account which refers to LifecycleDate of account (e.g., ClosingDate, OpeningDate, LiveDate, etc.) '
+    accounttype:
+      type: object
+      properties:
+        AccountType:
+          type: string
+          description: ''
+          format: accounttypevalues
+        AccountTypeName:
+          $ref: '#/components/schemas/name'
+      description: 'Specifies the category of account like payment account, loan account, cash account, securities account, etc. '
+    currencycode:
+      type: object
+      properties:
+        Currencycode:
+          type: string
+          description: "A code identifying a currency according to ISO-4217.\nA currency is a system of money in general use in a particular country.\n\nCode allocated to a currency, by a maintenance agency, under an international identification scheme as described in the latest edition of the international standard ISO 4217 \"Codes for the representation of currencies and funds\". Valid currency codes are registered with the ISO 4217 Maintenance Agency, and consist of three contiguous letters. (ISO20022)\n\n"
+          format: datatype
+      description: ''
+    amount:
+      type: object
+      properties:
+        AmountValue:
+          type: string
+          description: ''
+          format: string
+        AmountCurrency:
+          $ref: '#/components/schemas/currencycode'
+        DecimalPointPosition:
+          type: string
+          description: "Decimal point position starts calulating from the right\n"
+          format: string
+      description: ''
+    accountbalance:
+      type: object
+      properties:
+        AccountBalance:
+          $ref: '#/components/schemas/amount'
+        AccountBalanceType:
+          type: string
+          description: ''
+          format: accountbalancetypevalues
+        AccounBalanceDate:
+          $ref: '#/components/schemas/datetime'
+      description: "The state of the obligations managed on the account, the result of all entries on the account.\n\nNumerical representation of the net increases and decreases in an account at a specific point in time. (ISO20022)\n\nBanking: Amount available in an account for withdrawal or use.\nRead more: http://www.businessdictionary.com/definition/balance.html\n\nBookkeeping: Difference between the debit and credit sides of an account.\nRead more: http://www.businessdictionary.com/definition/balance.html"
+    accountcurrency:
+      type: object
+      properties:
+        AccountCurrencyType:
+          type: string
+          description: ''
+          format: accountcurrencytypevalues
+        AccountCurrency:
+          $ref: '#/components/schemas/currencycode'
+      description: ''
+    account:
+      type: object
+      properties:
+        AccountStatus:
+          $ref: '#/components/schemas/accountstatus'
+        AccountIdentification:
+          $ref: '#/components/schemas/accountidentification'
+        AccountDate:
+          $ref: '#/components/schemas/accountdate'
+        AccountType:
+          $ref: '#/components/schemas/accounttype'
+        AccountPurpose:
+          $ref: '#/components/schemas/text'
+        AccountBalance:
+          $ref: '#/components/schemas/accountbalance'
+        AccountCurrency:
+          $ref: '#/components/schemas/accountcurrency'
+        AccountDescription:
+          $ref: '#/components/schemas/text'
+      description: "Reference to the account which is linked to Supplier Agreement\n\nA characteristic of agreement which refers to its involved account to specify the account that will be used to register for the transactions in position keeping management."
+    productidentification:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/identifier'
+        ProductIdentificationType:
+          type: string
+          description: ''
+          format: productidentificationtypevalues
+      description: The identifier of product e.g. ISIN Code.
+    bankingproducttypevalues:
+      enum:
+        - LoanProduct
+        - CurrentAccountProduct
+        - SavingAccountProduct
+      type: string
+      description: ">\n* `LoanProduct` - \n* `CurrentAccountProduct` - \n* `SavingAccountProduct` - \n"
+    productlifecyclestatus:
+      type: object
+      properties:
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ProductLifecycleStatusType:
+          type: string
+          description: ''
+          format: productlifecyclestatustypevalues
+      description: 'Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).'
+    bankingproduct:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/productidentification'
+        ProductType:
+          $ref: '#/components/schemas/bankingproducttypevalues'
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/productlifecyclestatus'
+        ProductPriority:
+          $ref: '#/components/schemas/text'
+        ProductDescription:
+          $ref: '#/components/schemas/text'
+        ProductVersion:
+          $ref: '#/components/schemas/text'
+      description: "Reference to the product which is linked to Supplier Agreement\n\nComment: \nA characteristic of agreement which refers to its related products that are sold by agreement."
+    SupplierAgreement:
+      type: object
+      properties:
+        SupplierAgreementParameterType:
+          $ref: '#/components/schemas/text'
+        SupplierAgreementSelectedOption:
+          $ref: '#/components/schemas/feature'
+        SupplierAgreementType:
+          $ref: '#/components/schemas/agreementtypevalues'
+        SupplierAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        SupplierAgreementDischargeRequest:
+          $ref: '#/components/schemas/instruction'
+        SupplierAgreementDischargeSchedule:
+          $ref: '#/components/schemas/schedule'
+        SupplierAgreementStatus:
+          $ref: '#/components/schemas/agreementlifecyclestatus'
+        SupplierAgreementAssociatedParty:
+          $ref: '#/components/schemas/involvedparty'
+        SupplierAgreementCustomerReference:
+          $ref: '#/components/schemas/involvedparty'
+        SupplierAgreementObligation:
+          $ref: '#/components/schemas/arrangement'
+        SupplierAgreementEntitlement:
+          $ref: '#/components/schemas/arrangement'
+        SupplierAgreementRegulationReference:
+          $ref: '#/components/schemas/ruleset'
+        SupplierAgreementRegulationType:
+          $ref: '#/components/schemas/rulesettype'
+        SupplierAgreementJurisdiction:
+          $ref: '#/components/schemas/jurisdiction'
+        SupplierAgreementAccountReference:
+          $ref: '#/components/schemas/account'
+        SupplierAgreementSubjectMatter:
+          type: string
+          description: The subject matter of  Supplier Agreement
+          format: object
+        SupplierAgreementProductReference:
+          $ref: '#/components/schemas/bankingproduct'
+        SupplierAgreementCalendarReference:
+          type: string
+          description: The calendar of Supplier Agreement
+          format: calendar
+        SupplierAgreementAssociatedAgreementReference:
+          $ref: '#/components/schemas/agreement'
+      description: "Maintain the terms and conditions that apply to a commercial relationship within Contractor and Supplier Agreement.\n\n"
+  responses:
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFound:
+      description: NotFound
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequests:
+      description: TooManyRequests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: InternalServerError
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    SupplierAgreement:
+      description: SupplierAgreement
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SupplierAgreement'
+    LegalTerm:
+      description: LegalTerm
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LegalTerm'
+    PolicyTerm:
+      description: PolicyTerm
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PolicyTerm'
+    RegulatoryTerm:
+      description: RegulatoryTerm
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RegulatoryTerm'
+  parameters:
+    contractorandsupplieragreementid:
+      name: contractorandsupplieragreementid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    legaltermid:
+      name: legaltermid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    policytermid:
+      name: policytermid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    regulatorytermid:
+      name: regulatorytermid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  requestBodies:
+    SupplierAgreement:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SupplierAgreement'
+      required: true
+    LegalTerm:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/LegalTerm'
+      required: true
+    PolicyTerm:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PolicyTerm'
+      required: true
+    RegulatoryTerm:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RegulatoryTerm'
+      required: true

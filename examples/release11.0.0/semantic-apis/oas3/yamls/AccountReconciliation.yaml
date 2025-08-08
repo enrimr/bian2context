@@ -1,0 +1,2233 @@
+openapi: 3.0.1
+info:
+  title: Account Reconciliation
+  description: This Service Domain handles account reconciliation tasks
+  contact:
+    name: BIAN
+    url: https://bian.org
+  version: 11.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/BIAN-3/BIAN/AccountReconciliation/11.0.0
+paths:
+  '/AccountReconciliation/{accountreconciliationid}/Control':
+    put:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Control Account Reconciliation Procedure
+      description: Control Account Reconciliation Procedure
+      operationId: Control
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      requestBody:
+        $ref: '#/components/requestBodies/ControlAccountReconciliationProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ControlAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/Exchange':
+    put:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Exchange Account Reconciliation Procedure
+      description: Exchange Account Reconciliation Procedure
+      operationId: Exchange
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExchangeAccountReconciliationProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExchangeAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/Execute':
+    put:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Execute Account Reconciliation Procedure
+      description: Execute Account Reconciliation Procedure
+      operationId: Execute
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExecuteAccountReconciliationProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExecuteAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /AccountReconciliation/Initiate:
+    post:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Initiate Account Reconciliation Procedure
+      description: Initiate Account Reconciliation Procedure
+      operationId: Initiate
+      requestBody:
+        $ref: '#/components/requestBodies/InitiateAccountReconciliationProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/InitiateAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/Notify':
+    get:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Notify Account Reconciliation Procedure
+      description: Notify Account Reconciliation Procedure
+      operationId: Notify
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      responses:
+        '200':
+          $ref: '#/components/responses/NotifyAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/Request':
+    put:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Request Account Reconciliation Procedure
+      description: Request Account Reconciliation Procedure
+      operationId: Request
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      requestBody:
+        $ref: '#/components/requestBodies/RequestAccountReconciliationProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/RequestAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/Retrieve':
+    get:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Retrieve Account Reconciliation Procedure
+      description: Retrieve Account Reconciliation Procedure
+      operationId: Retrieve
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      responses:
+        '200':
+          $ref: '#/components/responses/RetrieveAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/Update':
+    put:
+      tags:
+        - CR - AccountReconciliationProcedure
+      summary: Update Account Reconciliation Procedure
+      description: Update Account Reconciliation Procedure
+      operationId: Update
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateAccountReconciliationProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UpdateAccountReconciliationProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Exchange Account Assessment Workstep
+      description: Exchange Account Assessment Workstep
+      operationId: ExchangeAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountAssessmentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Exchange Account Resolution Workstep
+      description: Exchange Account Resolution Workstep
+      operationId: ExchangeAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Execute Account Assessment Workstep
+      description: Execute Account Assessment Workstep
+      operationId: ExecuteAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountAssessmentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Execute Account Resolution Workstep
+      description: Execute Account Resolution Workstep
+      operationId: ExecuteAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Initiate Account Assessment Workstep
+      description: Initiate Account Assessment Workstep
+      operationId: InitiateAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountAssessmentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Initiate Account Resolution Workstep
+      description: Initiate Account Resolution Workstep
+      operationId: InitiateAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Notify Account Assessment Workstep
+      description: Notify Account Assessment Workstep
+      operationId: NotifyAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Notify Account Resolution Workstep
+      description: Notify Account Resolution Workstep
+      operationId: NotifyAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Request':
+    put:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Request Account Assessment Workstep
+      description: Request Account Assessment Workstep
+      operationId: RequestAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountAssessmentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Request Account Resolution Workstep
+      description: Request Account Resolution Workstep
+      operationId: RequestAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Retrieve Account Assessment Workstep
+      description: Retrieve Account Assessment Workstep
+      operationId: RetrieveAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Retrieve Account Resolution Workstep
+      description: Retrieve Account Resolution Workstep
+      operationId: RetrieveAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountAssessmentWorkstep/{accountassessmentworkstepid}/Update':
+    put:
+      tags:
+        - BQ - AccountAssessmentWorkstep
+      summary: Update Account Assessment Workstep
+      description: Update Account Assessment Workstep
+      operationId: UpdateAccountAssessmentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountassessmentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountAssessmentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountAssessmentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/AccountReconciliation/{accountreconciliationid}/AccountResolutionWorkstep/{accountresolutionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - AccountResolutionWorkstep
+      summary: Update Account Resolution Workstep
+      description: Update Account Resolution Workstep
+      operationId: UpdateAccountResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/accountreconciliationid'
+        - $ref: '#/components/parameters/accountresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/AccountResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/AccountResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+          format: string
+        status:
+          type: string
+          format: string
+        message:
+          type: string
+          format: string
+      description: Status Attributes
+    condition:
+      type: object
+      properties:
+        Condition:
+          type: string
+          description: "Condition is a premise upon which the fulfillment of an agreement depends \n\nGeneral and special arrangements, provisions, requirements, rules, specifications, and standards that form an integral part of an agreement or contract.\n\nRead more: http://www.businessdictionary.com/definition/terms-and-conditions.html\n\n"
+          format: class
+      description: The required status/situation and or tasks that need to be completed prior to the initiation of the workstep
+    name:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: 'A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT)'
+          format: datatype
+      description: Name by which a party is known and which is usually used to identify that party. (ISO20022)
+    partytypevalues:
+      enum:
+        - Person
+        - Organisation
+      type: string
+      description: ">\n* `Person` - Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). ISO20022\n* `Organisation` - Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution. ISO20022\n"
+    datetime:
+      type: object
+      properties:
+        DateTimeContent:
+          type: string
+          description: ''
+          format: string
+        TimeZoneCode:
+          type: string
+          description: ''
+          format: string
+        DaylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    value:
+      type: object
+      properties:
+        Value:
+          type: string
+          description: 'A value is the concept of worth in general that is assigned or is determined by measurement, assessment or calculation. (UN/CEFACT)'
+          format: datatype
+      description: ''
+    identifier:
+      type: object
+      properties:
+        IdentifierValue:
+          $ref: '#/components/schemas/value'
+        IdentifierIssuingAuthority:
+          $ref: '#/components/schemas/involvedparty'
+        IdentifierStartDate:
+          $ref: '#/components/schemas/datetime'
+        IdentifierEndDate:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyidentification:
+      type: object
+      properties:
+        PartyIdentificationType:
+          type: string
+          description: ''
+          format: partyidentificationtypevalues
+        PartyIdentification:
+          $ref: '#/components/schemas/identifier'
+      description: ''
+    party:
+      type: object
+      properties:
+        PartyName:
+          $ref: '#/components/schemas/name'
+        PartyType:
+          $ref: '#/components/schemas/partytypevalues'
+        PartyDateTime:
+          $ref: '#/components/schemas/datetime'
+        PartyIdentification:
+          $ref: '#/components/schemas/partyidentification'
+      description: ''
+    text:
+      type: object
+      properties:
+        Text:
+          type: string
+          description: Text is a character string such as a finite set of characters generally in the form of words of a language. (UN/CEFACT)
+          format: datatype
+      description: ''
+    datetimeperiod:
+      type: object
+      properties:
+        FromDateTime:
+          $ref: '#/components/schemas/datetime'
+        ToDateTime:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyinvolvementtypevalues:
+      enum:
+        - Agreementinvolvement
+        - Partyinvolvement
+        - Arrangementinvolvement
+        - Designspecificationinvolvement
+        - Relationshipinvolvement
+        - Locationinvolvement
+        - Bankguaranteeinvolvement
+      type: string
+      description: ">\n* `Agreementinvolvement` - \n* `Partyinvolvement` - \n* `Arrangementinvolvement` - \n* `Designspecificationinvolvement` - \n* `Relationshipinvolvement` - \n* `Locationinvolvement` - \n* `Bankguaranteeinvolvement` - \n"
+    partyrole:
+      type: object
+      properties:
+        PartyRoleType:
+          $ref: '#/components/schemas/text'
+        PartyRoleName:
+          $ref: '#/components/schemas/name'
+        PartyRoleValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        PartyInvolvementType:
+          $ref: '#/components/schemas/partyinvolvementtypevalues'
+      description: ''
+    involvedparty:
+      type: object
+      properties:
+        PartyReference:
+          $ref: '#/components/schemas/party'
+        PartyInvolvement:
+          $ref: '#/components/schemas/partyrole'
+      description: The operating unit/employee responsible for the workstep
+    schedule:
+      type: object
+      properties:
+        ScheduleType:
+          type: string
+          description: ''
+          format: string
+      description: The timing and key actions/milestones making up the workstep
+    businessservicetypevalues:
+      type: object
+      properties:
+        Businessservicetypevalues:
+          type: string
+          description: ''
+          format: enumeration
+      description: ''
+    businessservice:
+      type: object
+      properties:
+        BusinessServiceName:
+          $ref: '#/components/schemas/name'
+        BusinessServiceType:
+          $ref: '#/components/schemas/businessservicetypevalues'
+        BusinessServiceDescription:
+          $ref: '#/components/schemas/text'
+      description: The Account Resolution Workstep specific Business Service
+    proceduretype:
+      type: object
+      properties:
+        ProcedureTypeName:
+          $ref: '#/components/schemas/name'
+        ProcedureType:
+          type: string
+          description: ''
+          format: proceduretypevalues
+      description: A Classification value that distinguishes between the type of process undertaken within Procedure
+    date:
+      type: object
+      properties:
+        DateContent:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instructiondate:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/date'
+        InstructionDateType:
+          type: string
+          description: ''
+          format: instructiondatetypevalues
+      description: ''
+    status:
+      type: object
+      properties:
+        StatusReason:
+          $ref: '#/components/schemas/text'
+        StatusDateTime:
+          $ref: '#/components/schemas/datetime'
+        StatusValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        StatusInvolvedParty:
+          $ref: '#/components/schemas/involvedparty'
+      description: ''
+    instructionlifecyclestatus:
+      type: object
+      properties:
+        InstructionLifecycleStatusType:
+          type: string
+          description: ''
+          format: instructionlifecylestatustypevalues
+        InstructionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+      description: 'A characteristic of instruction which refers to the LifecycleStatus of instruction (e.g., requested, executed, fulfilled, etc.); '
+    instructionidentification:
+      type: object
+      properties:
+        InstructionIdentifier:
+          $ref: '#/components/schemas/identifier'
+        InstructionIdentifierType:
+          type: string
+          description: ''
+          format: instructionidentificationtypevalues
+      description: "An identifier that allows to uniquely refer to an instance of an Instruction.\n"
+    instructiontypevalues:
+      enum:
+        - PaymentInstruction
+        - DeliveryOrder
+        - InformationRequest
+        - ExchangeInstruction
+        - AllocationInstruction
+        - MaintenanceInstruction
+      type: string
+      description: ">\n* `PaymentInstruction` - \n* `DeliveryOrder` - \n* `InformationRequest` - \n* `ExchangeInstruction` - \n* `AllocationInstruction` - \n* `MaintenanceInstruction` - \n"
+    log:
+      type: object
+      properties:
+        LogType:
+          type: string
+          description: ''
+          format: string
+        LogPeriod:
+          type: string
+          description: ''
+          format: string
+        LogDate:
+          type: string
+          description: Key dates associated with the log (e.g. start time).
+          format: string
+        LogIdentification:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instruction:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/instructiondate'
+        InstructionStatus:
+          $ref: '#/components/schemas/instructionlifecyclestatus'
+        InstructionIdentifier:
+          $ref: '#/components/schemas/instructionidentification'
+        InstructionType:
+          $ref: '#/components/schemas/instructiontypevalues'
+        InstructionResult:
+          $ref: '#/components/schemas/text'
+        InstructionDescription:
+          $ref: '#/components/schemas/text'
+        InstructionLog:
+          $ref: '#/components/schemas/log'
+        InstructionPurpose:
+          $ref: '#/components/schemas/text'
+      description: Request to process something (most refers to Asset Type)
+    procedure:
+      type: object
+      properties:
+        ProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        ProcedureDateTime:
+          $ref: '#/components/schemas/datetime'
+        ProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        ProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        ProcedureStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Account Resolution Workstep
+    worksteptype:
+      type: object
+      properties:
+        WorkstepTypeName:
+          $ref: '#/components/schemas/name'
+        WorkstepType:
+          type: string
+          description: ''
+          format: worksteptypevalues
+      description: A Classification value that distinguishes between the type of workstep undertaken within Procedure
+    workstep:
+      type: object
+      properties:
+        WorkstepResult:
+          type: string
+          description: ''
+          format: string
+        WorkstepType:
+          $ref: '#/components/schemas/worksteptype'
+        WorkstepDescription:
+          $ref: '#/components/schemas/text'
+        WorkstepDateTime:
+          $ref: '#/components/schemas/datetime'
+        WorkstepStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Account Resolution Workstep
+    AccountResolutionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        AccountReconciliationProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        AccountResolutionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        AccountResolutionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Account Resolution Workstep in the context of executing the Account Resolution Workstep
+    AccountAssessmentWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        AccountReconciliationProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        AccountAssessmentWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        AccountAssessmentWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Account Resolution Workstep in the context of executing the Account Resolution Workstep
+    workproduct:
+      type: object
+      properties:
+        WorkProductType:
+          type: string
+          description: ''
+          format: workproducttypevalues
+        WorkProductIdentifoication:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    AccountReconciliationOutcome:
+      type: object
+      properties:
+        AccountReconciliationWorkProduct:
+          $ref: '#/components/schemas/workproduct'
+        AccountReconciliationProcedure:
+          $ref: '#/components/schemas/procedure'
+      description: A course of action for doing Account Resolution Workstep in the context of executing the Account Resolution Workstep
+    feature:
+      type: object
+      properties:
+        FeatureType:
+          type: string
+          description: ''
+          format: string
+      description: A selected optional business service as subject matter of Account Reconciliation Procedure
+    financialfacility:
+      type: object
+      properties:
+        FinancialFacility:
+          type: string
+          description: ''
+          format: class
+      description: Reference to the Financial Facility related to Account Reconciliation Procedure
+    servicetype:
+      type: object
+      properties:
+        ServiceTypeName:
+          $ref: '#/components/schemas/name'
+        ServiceType:
+          type: string
+          description: ''
+          format: servicetypevalues
+      description: A Classification value that distinguishes between the type of services in Account Reconciliation Procedure
+    productidentification:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/identifier'
+        ProductIdentificationType:
+          type: string
+          description: ''
+          format: productidentificationtypevalues
+      description: The identifier of product e.g. ISIN Code.
+    bankingproducttypevalues:
+      enum:
+        - LoanProduct
+        - CurrentAccountProduct
+        - SavingAccountProduct
+      type: string
+      description: ">\n* `LoanProduct` - \n* `CurrentAccountProduct` - \n* `SavingAccountProduct` - \n"
+    productlifecyclestatus:
+      type: object
+      properties:
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ProductLifecycleStatusType:
+          type: string
+          description: ''
+          format: productlifecyclestatustypevalues
+      description: 'Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).'
+    bankingproduct:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/productidentification'
+        ProductType:
+          $ref: '#/components/schemas/bankingproducttypevalues'
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/productlifecyclestatus'
+        ProductPriority:
+          $ref: '#/components/schemas/text'
+        ProductDescription:
+          $ref: '#/components/schemas/text'
+        ProductVersion:
+          $ref: '#/components/schemas/text'
+      description: Reference to the product or service that is related to Account Reconciliation Procedure
+    transactiondate:
+      type: object
+      properties:
+        TransactionDate:
+          $ref: '#/components/schemas/datetime'
+        TransactionDateType:
+          type: string
+          description: ''
+          format: transactiondatetypevalues
+      description: "The Date that the transaction has occurred or is planned to occur.\nA characteristic of transaction which refers to the LifecycleDate of transaction (e.g., initiated date, executed date, fulfillment date). "
+    transactiontypevalues:
+      enum:
+        - FinancialTransaction
+        - BusinessTransaction
+        - BankingTransaction
+        - AccountingTransaction
+        - BookingTransaction
+        - AllocationTransaction
+        - DeliveryTransaction
+        - ProductionTransaction
+      type: string
+      description: ">\n* `FinancialTransaction` - \n* `BusinessTransaction` - \n* `BankingTransaction` - \n* `AccountingTransaction` - \n* `BookingTransaction` - \n* `AllocationTransaction` - \n* `DeliveryTransaction` - \n* `ProductionTransaction` - \n"
+    transactionlifecyclestatus:
+      type: object
+      properties:
+        TransactionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        TransactionLifecycleStatusType:
+          type: string
+          description: ''
+          format: transactionlifecyclestatustypevalues
+      description: 'A characteristic of transaction which refers to the LifecycleStatus of transaction (e.g., initiated, executed, confirmed, cancelled, etc.) '
+    transaction:
+      type: object
+      properties:
+        TransactionIdentification:
+          $ref: '#/components/schemas/identifier'
+        TransactionDate:
+          $ref: '#/components/schemas/transactiondate'
+        TransactionType:
+          $ref: '#/components/schemas/transactiontypevalues'
+        TransactionDescription:
+          $ref: '#/components/schemas/text'
+        TransactionStatus:
+          $ref: '#/components/schemas/transactionlifecyclestatus'
+        TransactionName:
+          $ref: '#/components/schemas/name'
+      description: Reference to the transaction that is related to Account Reconciliation Procedure
+    actiontypevalues:
+      enum:
+        - Initiate
+        - Execute
+        - Create
+        - Transfer
+        - Pay
+        - Deliver
+        - Apply
+        - Calculate
+      type: string
+      description: ">\n* `Initiate` - \n* `Execute` - \n* `Create` - \n* `Transfer` - \n* `Pay` - \n* `Deliver` - \n* `Apply` - \n* `Calculate` - \n"
+    action:
+      type: object
+      properties:
+        ActionType:
+          $ref: '#/components/schemas/actiontypevalues'
+      description: ''
+    arrangementlifecyclestatus:
+      type: object
+      properties:
+        ArrangementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ArrangementLifecycleStatusType:
+          type: string
+          description: ''
+          format: arrangementlifecyclestatustypevalues
+      description: 'A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.)'
+    subject:
+      type: object
+      properties:
+        Subject:
+          type: string
+          description: A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.
+          format: class
+      description: ''
+    arrangementtypevalues:
+      enum:
+        - SweepArrangement
+        - WithdrawalArrangement
+        - DepositArrangement
+        - InterestArrangement
+        - FeeArrangement
+        - LienArrangement
+        - InformationArrangement
+        - PaymentServiceArrangement
+        - EntitlementArrangement
+        - PeriodArrangement
+        - CollateralArrangement
+        - LimitArrangement
+        - AccessArrangement
+        - CardPaymentArrangement
+        - StandingOrderArrangement
+        - OverdraftArrangement
+        - RepaymentArrangement
+        - StatementArrangement
+        - CreditTransferArrangement
+        - ProductAndServiceArrangement
+        - FactoringArrangement
+        - RolloverArrangement
+      type: string
+      description: ">\n* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.\n* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. \n* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. \n* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.\n* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. \n* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. \n* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account\n* `PaymentServiceArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. \n* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement\n* `PeriodArrangement` - \n* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. \n* `LimitArrangement` - An arrangement to limit something\ne.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. \n* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point\n* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. \n* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. \n* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. \n* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. \n* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. \n* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. \n* `ProductAndServiceArrangement` - \n* `FactoringArrangement` - \n* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement\n\ni.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer \n"
+    arrangement:
+      type: object
+      properties:
+        ArrangementAction:
+          $ref: '#/components/schemas/action'
+        ArrangementStartDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementEndDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementStatus:
+          $ref: '#/components/schemas/arrangementlifecyclestatus'
+        ArrangementSubjectMatter:
+          $ref: '#/components/schemas/subject'
+        Arrangementtype:
+          $ref: '#/components/schemas/arrangementtypevalues'
+      description: Reference to the Financial Transaction Arrangement that is related to Account Reconciliation Procedure
+    agreementtypevalues:
+      enum:
+        - CustomerAgreement
+        - SupplierAgreement
+        - BrokerAgreement
+        - SalesAgreement
+        - PurchaseAgreement
+        - MaintenanceAgreement
+        - ProductAgreement
+        - ProductSalesAgreement
+        - ResourceAgreement
+      type: string
+      description: ">\n* `CustomerAgreement` - \n* `SupplierAgreement` - \n* `BrokerAgreement` - \n* `SalesAgreement` - \n* `PurchaseAgreement` - \n* `MaintenanceAgreement` - \n* `ProductAgreement` - \n* `ProductSalesAgreement` - \n* `ResourceAgreement` - \n"
+    agreementlifecyclestatus:
+      type: object
+      properties:
+        AgreementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        AgreementLifecycleStatusType:
+          type: string
+          description: ''
+          format: agreementlifecyclestatustypevalues
+      description: 'A characteristic of agreement which refers to the LifecycleStatus of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).'
+    agreement:
+      type: object
+      properties:
+        AgreementSignedDate:
+          $ref: '#/components/schemas/date'
+        AgreementType:
+          $ref: '#/components/schemas/agreementtypevalues'
+        AgreementValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        AgreementVersion:
+          $ref: '#/components/schemas/text'
+        AgreementStatus:
+          $ref: '#/components/schemas/agreementlifecyclestatus'
+        AgreementSubjectMatter:
+          $ref: '#/components/schemas/text'
+        AgreementIdentification:
+          $ref: '#/components/schemas/identifier'
+        AgreementDate:
+          $ref: '#/components/schemas/datetime'
+      description: Reference to the Customer Agreement that is related to Account Reconciliation Procedure
+    AccountReconciliationProcedure:
+      type: object
+      properties:
+        AccountReconciliationProcedureParameterType:
+          $ref: '#/components/schemas/text'
+        AccountReconciliationProcedureSelectedOption:
+          $ref: '#/components/schemas/feature'
+        AccountReconciliationProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        AccountReconciliationProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        AccountReconciliationProcedureStatus:
+          $ref: '#/components/schemas/status'
+        AccountReconciliationProcedureAssociatedPartyReference:
+          $ref: '#/components/schemas/involvedparty'
+        AccountReconciliationProcedureBusinessUnitReference:
+          $ref: '#/components/schemas/involvedparty'
+        AccountReconciliationProcedureServiceProviderReference:
+          $ref: '#/components/schemas/involvedparty'
+        AccountReconciliationProcedureFinancialFacilityReference:
+          $ref: '#/components/schemas/financialfacility'
+        AccountReconciliationProcedureEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        AccountReconciliationProcedureCustomerReference:
+          $ref: '#/components/schemas/involvedparty'
+        AccountReconciliationProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        AccountReconciliationProcedureServiceProviderSchedule:
+          $ref: '#/components/schemas/schedule'
+        AccountReconciliationProcedureServiceType:
+          $ref: '#/components/schemas/servicetype'
+        AccountReconciliationProcedureProductandServiceType:
+          type: string
+          description: A Classification value that distinguishes between the type of products/services related to Account Reconciliation Procedure
+          format: bankingproducttype
+        AccountReconciliationProcedureProductandServiceInstance:
+          $ref: '#/components/schemas/bankingproduct'
+        AccountReconciliationProcedureTransactionType:
+          type: string
+          description: A Classification value that distinguishes between the type of transactions in Account Reconciliation Procedure
+          format: transactiontype
+        AccountReconciliationProcedureTransaction:
+          $ref: '#/components/schemas/transaction'
+        AccountReconciliationProcedureFinancialTransactionArrangement:
+          $ref: '#/components/schemas/arrangement'
+        AccountReconciliationProcedureCustomerAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        AccountReconciliationProcedureReference:
+          $ref: '#/components/schemas/procedure'
+      description: 'Complete work tasks following a defined procedure in support of general office activities and product and service delivery within Account Reconciliation. '
+    ControlAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Control Account Reconciliation Procedure'
+    ControlAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Control Account Reconciliation Procedure'
+    ExchangeAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Exchange Account Reconciliation Procedure'
+    ExchangeAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Exchange Account Reconciliation Procedure'
+    ExecuteAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Execute Account Reconciliation Procedure'
+    ExecuteAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Execute Account Reconciliation Procedure'
+    InitiateAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Initiate Account Reconciliation Procedure'
+    InitiateAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Initiate Account Reconciliation Procedure'
+    NotifyAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Notify Account Reconciliation Procedure'
+    NotifyAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Notify Account Reconciliation Procedure'
+    RequestAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Request Account Reconciliation Procedure'
+    RequestAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Request Account Reconciliation Procedure'
+    RetrieveAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Retrieve Account Reconciliation Procedure'
+    RetrieveAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Retrieve Account Reconciliation Procedure'
+    UpdateAccountReconciliationProcedureRequest:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Update Account Reconciliation Procedure'
+    UpdateAccountReconciliationProcedureResponse:
+      type: object
+      properties:
+        AccountReconciliationProcedure:
+          type: object
+          properties:
+            AccountReconciliationProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            AccountReconciliationProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            AccountReconciliationProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            AccountReconciliationProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureStatus:
+              $ref: '#/components/schemas/status'
+            AccountReconciliationProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            AccountReconciliationProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            AccountReconciliationProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            AccountReconciliationProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            AccountReconciliationProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            AccountReconciliationProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            AccountReconciliationProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            AccountReconciliationProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            AccountReconciliationProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            AccountReconciliationProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            AccountReconciliationProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Update Account Reconciliation Procedure'
+  responses:
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFound:
+      description: NotFound
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequests:
+      description: TooManyRequests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: InternalServerError
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ControlAccountReconciliationProcedureResponse:
+      description: ControlAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlAccountReconciliationProcedureResponse'
+    ExchangeAccountReconciliationProcedureResponse:
+      description: ExchangeAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeAccountReconciliationProcedureResponse'
+    ExecuteAccountReconciliationProcedureResponse:
+      description: ExecuteAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteAccountReconciliationProcedureResponse'
+    InitiateAccountReconciliationProcedureResponse:
+      description: InitiateAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateAccountReconciliationProcedureResponse'
+    NotifyAccountReconciliationProcedureResponse:
+      description: NotifyAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NotifyAccountReconciliationProcedureResponse'
+    RequestAccountReconciliationProcedureResponse:
+      description: RequestAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestAccountReconciliationProcedureResponse'
+    RetrieveAccountReconciliationProcedureResponse:
+      description: RetrieveAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RetrieveAccountReconciliationProcedureResponse'
+    UpdateAccountReconciliationProcedureResponse:
+      description: UpdateAccountReconciliationProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateAccountReconciliationProcedureResponse'
+    AccountAssessmentWorkstep:
+      description: AccountAssessmentWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AccountAssessmentWorkstep'
+    AccountResolutionWorkstep:
+      description: AccountResolutionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AccountResolutionWorkstep'
+  parameters:
+    accountreconciliationid:
+      name: accountreconciliationid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    accountassessmentworkstepid:
+      name: accountassessmentworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    accountresolutionworkstepid:
+      name: accountresolutionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  requestBodies:
+    ControlAccountReconciliationProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlAccountReconciliationProcedureRequest'
+      required: true
+    ExchangeAccountReconciliationProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeAccountReconciliationProcedureRequest'
+      required: true
+    ExecuteAccountReconciliationProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteAccountReconciliationProcedureRequest'
+      required: true
+    InitiateAccountReconciliationProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateAccountReconciliationProcedureRequest'
+      required: true
+    RequestAccountReconciliationProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestAccountReconciliationProcedureRequest'
+      required: true
+    UpdateAccountReconciliationProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateAccountReconciliationProcedureRequest'
+      required: true
+    AccountAssessmentWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AccountAssessmentWorkstep'
+      required: true
+    AccountResolutionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AccountResolutionWorkstep'
+      required: true

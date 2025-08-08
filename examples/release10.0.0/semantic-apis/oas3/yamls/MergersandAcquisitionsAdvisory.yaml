@@ -1,0 +1,600 @@
+openapi: 3.0.1
+info:
+  title: Mergers and Acquisitions Advisory
+  description: This Service Domain handles mergers and acquisition, IPO, MBO and LBO projects with the bank acting in the lead and/or subordinate role
+  version: 10.0.0
+servers:
+- description: SwaggerHub API Auto Mocking
+  url: https://virtserver.swaggerhub.com/BIAN-3/MergersandAcquisitionsAdvisory/10.0.0
+paths:
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Control:
+    put:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Control Mergers And Acquisition Advice
+      description: Control Mergers And Acquisition Advice
+      operationId: Control
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/MergersAndAcquisitionAdvice'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Exchange:
+    put:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Exchange Mergers And Acquisition Advice
+      description: Exchange Mergers And Acquisition Advice
+      operationId: Exchange
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/MergersAndAcquisitionAdvice'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Execute:
+    put:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Execute Mergers And Acquisition Advice
+      description: Execute Mergers And Acquisition Advice
+      operationId: Execute
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/MergersAndAcquisitionAdvice'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/Initiate:
+    post:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Initiate Mergers And Acquisition Advice
+      description: Initiate Mergers And Acquisition Advice
+      operationId: Initiate
+      parameters: []
+      requestBody:
+        $ref: '#/components/requestBodies/MergersAndAcquisitionAdvice'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Notify:
+    get:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Notify Mergers And Acquisition Advice
+      description: Notify Mergers And Acquisition Advice
+      operationId: Notify
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Request:
+    put:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Request Mergers And Acquisition Advice
+      description: Request Mergers And Acquisition Advice
+      operationId: Request
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/MergersAndAcquisitionAdvice'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Retrieve:
+    get:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Retrieve Mergers And Acquisition Advice
+      description: Retrieve Mergers And Acquisition Advice
+      operationId: Retrieve
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/Update:
+    put:
+      tags:
+      - CR - MergersAndAcquisitionAdvice
+      summary: Update Mergers And Acquisition Advice
+      description: Update Mergers And Acquisition Advice
+      operationId: Update
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/MergersAndAcquisitionAdvice'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/{mandacandidateselectionandevaluationtopicId}/Exchange:
+    put:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Exchange MandA Candidate Selection and Evaluation Topic
+      description: Exchange MandA Candidate Selection and Evaluation Topic
+      operationId: ExchangeMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      - $ref: '#/components/parameters/MandACandidateSelectionandEvaluationTopicID'
+      requestBody:
+        $ref: '#/components/requestBodies/MandACandidateSelectionandEvaluationTopic'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/{mandacandidateselectionandevaluationtopicId}/Execute:
+    put:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Execute MandA Candidate Selection and Evaluation Topic
+      description: Execute MandA Candidate Selection and Evaluation Topic
+      operationId: ExecuteMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      - $ref: '#/components/parameters/MandACandidateSelectionandEvaluationTopicID'
+      requestBody:
+        $ref: '#/components/requestBodies/MandACandidateSelectionandEvaluationTopic'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/Initiate:
+    post:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Initiate MandA Candidate Selection and Evaluation Topic
+      description: Initiate MandA Candidate Selection and Evaluation Topic
+      operationId: InitiateMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      requestBody:
+        $ref: '#/components/requestBodies/MandACandidateSelectionandEvaluationTopic'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/{mandacandidateselectionandevaluationtopicId}/Notify:
+    get:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Notify MandA Candidate Selection and Evaluation Topic
+      description: Notify MandA Candidate Selection and Evaluation Topic
+      operationId: NotifyMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      - $ref: '#/components/parameters/MandACandidateSelectionandEvaluationTopicID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/{mandacandidateselectionandevaluationtopicId}/Request:
+    put:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Request MandA Candidate Selection and Evaluation Topic
+      description: Request MandA Candidate Selection and Evaluation Topic
+      operationId: RequestMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      - $ref: '#/components/parameters/MandACandidateSelectionandEvaluationTopicID'
+      requestBody:
+        $ref: '#/components/requestBodies/MandACandidateSelectionandEvaluationTopic'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/{mandacandidateselectionandevaluationtopicId}/Retrieve:
+    get:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Retrieve MandA Candidate Selection and Evaluation Topic
+      description: Retrieve MandA Candidate Selection and Evaluation Topic
+      operationId: RetrieveMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      - $ref: '#/components/parameters/MandACandidateSelectionandEvaluationTopicID'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+  /MergersandAcquisitionsAdvisory/{mergersandacquisitionsadvisoryId}/MandACandidateSelectionandEvaluationTopic/{mandacandidateselectionandevaluationtopicId}/Update:
+    put:
+      tags:
+      - BQ - MandACandidateSelectionandEvaluationTopic
+      summary: Update MandA Candidate Selection and Evaluation Topic
+      description: Update MandA Candidate Selection and Evaluation Topic
+      operationId: UpdateMandACandidateSelectionandEvaluationTopic
+      parameters:
+      - $ref: '#/components/parameters/MergersandAcquisitionsAdvisoryID'
+      - $ref: '#/components/parameters/MandACandidateSelectionandEvaluationTopicID'
+      requestBody:
+        $ref: '#/components/requestBodies/MandACandidateSelectionandEvaluationTopic'
+      responses:
+        200:
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+        400:
+          $ref: '#/components/responses/BadRequestError'
+        401:
+          $ref: '#/components/responses/UnauthorizedError'
+        403:
+          $ref: '#/components/responses/ForbiddenError'
+        404:
+          $ref: '#/components/responses/NotFoundError'
+        429:
+          $ref: '#/components/responses/TooManyRequestsError'
+        500:
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    MergersAndAcquisitionAdvice:
+      type: object
+      properties:
+        MergersAndAcquisitionAdviceSubjectAreaType:
+          type: string
+        MergersAndAcquisitionAdviceParameterType:
+          type: string
+        MergersAndAcquisitionAdviceSelectedOption:
+          type: string
+        MergersAndAcquisitionAdviceRequest:
+          type: string
+        MergersAndAcquisitionAdviceUsageLog:
+          type: string
+        MergersAndAcquisitionAdviceFeedback:
+          type: string
+        MergersAndAcquisitionAdviceType:
+          type: string
+        MergersAndAcquisitionAdviceReference:
+          type: object
+    MandACandidateSelectionandEvaluationTopic:
+      type: object
+      properties:
+        MergersAndAcquisitionAdviceReference:
+          type: object
+        MandACandidateSelectionandEvaluationTopicReference:
+          type: object
+        MandACandidateSelectionandEvaluationTopicType:
+          type: string
+        BusinessService:
+          type: object
+        BusinessUnit/EmployeeReference:
+          type: object
+        Postconditions:
+          type: object
+        Preconditions:
+          type: object
+        Schedule:
+          type: object
+    MergersandAcquisitionsAdvisoryOutcome:
+      type: object
+      properties:
+        MergersandAcquisitionsAdvisoryTask:
+          type: string
+        MergersandAcquisitionsAdvisoryProject:
+          type: string
+        MergersandAcquisitionsAdvisoryWorkProduct:
+          type: object
+        MergersandAcquisitionsAdvisoryWorkforceAnalysis:
+          type: string
+        MergersandAcquisitionsAdvisoryWorkforceAssignment:
+          type: string
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+        status:
+          type: string
+        message:
+          type: string
+  parameters:
+    MergersandAcquisitionsAdvisoryID:
+      name: mergersandacquisitionsadvisoryId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MandACandidateSelectionandEvaluationTopicID:
+      name: mandacandidateselectionandevaluationtopicId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+    MergersandAcquisitionsAdvisoryOutcomeID:
+      name: mergersandacquisitionsadvisoryoutcomeId
+      in: path
+      required: true
+      style: simple
+      explode: false
+      schema:
+        type: string
+  requestBodies:
+    MergersAndAcquisitionAdvice:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MergersAndAcquisitionAdvice'
+    MandACandidateSelectionandEvaluationTopic:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MandACandidateSelectionandEvaluationTopic'
+  responses:
+    HTTPError:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    BadRequestError:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    UnauthorizedError:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ForbiddenError:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFoundError:
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequestsError:
+      description: Too Many Requests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+...

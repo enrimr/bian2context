@@ -1,0 +1,2905 @@
+openapi: 3.0.1
+info:
+  title: Trade Clearing
+  description: This Service Domain handles the back office processes that confirm and notify interested parties that securities and funds are available as traded in anticipation of settlement processing
+  contact:
+    name: BIAN
+    url: https://bian.org
+  version: 11.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/BIAN-3/BIAN/TradeClearing/11.0.0
+paths:
+  '/TradeClearing/{tradeclearingid}/Control':
+    put:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Control Trade Clearing Procedure
+      description: Control Trade Clearing Procedure
+      operationId: Control
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      requestBody:
+        $ref: '#/components/requestBodies/ControlTradeClearingProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ControlTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/Exchange':
+    put:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Exchange Trade Clearing Procedure
+      description: Exchange Trade Clearing Procedure
+      operationId: Exchange
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExchangeTradeClearingProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExchangeTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/Execute':
+    put:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Execute Trade Clearing Procedure
+      description: Execute Trade Clearing Procedure
+      operationId: Execute
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExecuteTradeClearingProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExecuteTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /TradeClearing/Initiate:
+    post:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Initiate Trade Clearing Procedure
+      description: Initiate Trade Clearing Procedure
+      operationId: Initiate
+      requestBody:
+        $ref: '#/components/requestBodies/InitiateTradeClearingProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/InitiateTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/Notify':
+    get:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Notify Trade Clearing Procedure
+      description: Notify Trade Clearing Procedure
+      operationId: Notify
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      responses:
+        '200':
+          $ref: '#/components/responses/NotifyTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/Request':
+    put:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Request Trade Clearing Procedure
+      description: Request Trade Clearing Procedure
+      operationId: Request
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      requestBody:
+        $ref: '#/components/requestBodies/RequestTradeClearingProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/RequestTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/Retrieve':
+    get:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Retrieve Trade Clearing Procedure
+      description: Retrieve Trade Clearing Procedure
+      operationId: Retrieve
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      responses:
+        '200':
+          $ref: '#/components/responses/RetrieveTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/Update':
+    put:
+      tags:
+        - CR - TradeClearingProcedure
+      summary: Update Trade Clearing Procedure
+      description: Update Trade Clearing Procedure
+      operationId: Update
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateTradeClearingProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UpdateTradeClearingProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Exchange Market Trade Confirmation Workstep
+      description: Exchange Market Trade Confirmation Workstep
+      operationId: ExchangeMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeConfirmationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Exchange Market Trade Funds and Security Availability Assurance Workstep
+      description: Exchange Market Trade Funds and Security Availability Assurance Workstep
+      operationId: ExchangeMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Exchange Market Trade Matching Workstep
+      description: Exchange Market Trade Matching Workstep
+      operationId: ExchangeMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeMatchingWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Exchange Market Trade Out Trade Resolution Workstep
+      description: Exchange Market Trade Out Trade Resolution Workstep
+      operationId: ExchangeMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeOutTradeResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Exchange Market Trade Settlement Initiation Workstep
+      description: Exchange Market Trade Settlement Initiation Workstep
+      operationId: ExchangeMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeSettlementInitiationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Execute Market Trade Confirmation Workstep
+      description: Execute Market Trade Confirmation Workstep
+      operationId: ExecuteMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeConfirmationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Execute Market Trade Funds and Security Availability Assurance Workstep
+      description: Execute Market Trade Funds and Security Availability Assurance Workstep
+      operationId: ExecuteMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Execute Market Trade Matching Workstep
+      description: Execute Market Trade Matching Workstep
+      operationId: ExecuteMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeMatchingWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Execute Market Trade Out Trade Resolution Workstep
+      description: Execute Market Trade Out Trade Resolution Workstep
+      operationId: ExecuteMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeOutTradeResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Execute Market Trade Settlement Initiation Workstep
+      description: Execute Market Trade Settlement Initiation Workstep
+      operationId: ExecuteMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeSettlementInitiationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Initiate Market Trade Confirmation Workstep
+      description: Initiate Market Trade Confirmation Workstep
+      operationId: InitiateMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeConfirmationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Initiate Market Trade Funds and Security Availability Assurance Workstep
+      description: Initiate Market Trade Funds and Security Availability Assurance Workstep
+      operationId: InitiateMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Initiate Market Trade Matching Workstep
+      description: Initiate Market Trade Matching Workstep
+      operationId: InitiateMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeMatchingWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Initiate Market Trade Out Trade Resolution Workstep
+      description: Initiate Market Trade Out Trade Resolution Workstep
+      operationId: InitiateMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeOutTradeResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Initiate Market Trade Settlement Initiation Workstep
+      description: Initiate Market Trade Settlement Initiation Workstep
+      operationId: InitiateMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeSettlementInitiationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Notify Market Trade Confirmation Workstep
+      description: Notify Market Trade Confirmation Workstep
+      operationId: NotifyMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Notify Market Trade Funds and Security Availability Assurance Workstep
+      description: Notify Market Trade Funds and Security Availability Assurance Workstep
+      operationId: NotifyMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Notify Market Trade Matching Workstep
+      description: Notify Market Trade Matching Workstep
+      operationId: NotifyMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Notify Market Trade Out Trade Resolution Workstep
+      description: Notify Market Trade Out Trade Resolution Workstep
+      operationId: NotifyMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Notify Market Trade Settlement Initiation Workstep
+      description: Notify Market Trade Settlement Initiation Workstep
+      operationId: NotifyMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Request':
+    put:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Request Market Trade Confirmation Workstep
+      description: Request Market Trade Confirmation Workstep
+      operationId: RequestMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeConfirmationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Request':
+    put:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Request Market Trade Funds and Security Availability Assurance Workstep
+      description: Request Market Trade Funds and Security Availability Assurance Workstep
+      operationId: RequestMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Request':
+    put:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Request Market Trade Matching Workstep
+      description: Request Market Trade Matching Workstep
+      operationId: RequestMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeMatchingWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Request Market Trade Out Trade Resolution Workstep
+      description: Request Market Trade Out Trade Resolution Workstep
+      operationId: RequestMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeOutTradeResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Request':
+    put:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Request Market Trade Settlement Initiation Workstep
+      description: Request Market Trade Settlement Initiation Workstep
+      operationId: RequestMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeSettlementInitiationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Retrieve Market Trade Confirmation Workstep
+      description: Retrieve Market Trade Confirmation Workstep
+      operationId: RetrieveMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Retrieve Market Trade Funds and Security Availability Assurance Workstep
+      description: Retrieve Market Trade Funds and Security Availability Assurance Workstep
+      operationId: RetrieveMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Retrieve Market Trade Matching Workstep
+      description: Retrieve Market Trade Matching Workstep
+      operationId: RetrieveMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Retrieve Market Trade Out Trade Resolution Workstep
+      description: Retrieve Market Trade Out Trade Resolution Workstep
+      operationId: RetrieveMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Retrieve Market Trade Settlement Initiation Workstep
+      description: Retrieve Market Trade Settlement Initiation Workstep
+      operationId: RetrieveMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeConfirmationWorkstep/{markettradeconfirmationworkstepid}/Update':
+    put:
+      tags:
+        - BQ - MarketTradeConfirmationWorkstep
+      summary: Update Market Trade Confirmation Workstep
+      description: Update Market Trade Confirmation Workstep
+      operationId: UpdateMarketTradeConfirmationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeconfirmationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeConfirmationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeConfirmationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep/{markettradefundsandsecurityavailabilityassuranceworkstepid}/Update':
+    put:
+      tags:
+        - BQ - MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      summary: Update Market Trade Funds and Security Availability Assurance Workstep
+      description: Update Market Trade Funds and Security Availability Assurance Workstep
+      operationId: UpdateMarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradefundsandsecurityavailabilityassuranceworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeMatchingWorkstep/{markettradematchingworkstepid}/Update':
+    put:
+      tags:
+        - BQ - MarketTradeMatchingWorkstep
+      summary: Update Market Trade Matching Workstep
+      description: Update Market Trade Matching Workstep
+      operationId: UpdateMarketTradeMatchingWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradematchingworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeMatchingWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeMatchingWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeOutTradeResolutionWorkstep/{markettradeouttraderesolutionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - MarketTradeOutTradeResolutionWorkstep
+      summary: Update Market Trade Out Trade Resolution Workstep
+      description: Update Market Trade Out Trade Resolution Workstep
+      operationId: UpdateMarketTradeOutTradeResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradeouttraderesolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeOutTradeResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeOutTradeResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/TradeClearing/{tradeclearingid}/MarketTradeSettlementInitiationWorkstep/{markettradesettlementinitiationworkstepid}/Update':
+    put:
+      tags:
+        - BQ - MarketTradeSettlementInitiationWorkstep
+      summary: Update Market Trade Settlement Initiation Workstep
+      description: Update Market Trade Settlement Initiation Workstep
+      operationId: UpdateMarketTradeSettlementInitiationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/tradeclearingid'
+        - $ref: '#/components/parameters/markettradesettlementinitiationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/MarketTradeSettlementInitiationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/MarketTradeSettlementInitiationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+          format: string
+        status:
+          type: string
+          format: string
+        message:
+          type: string
+          format: string
+      description: Status Attributes
+    condition:
+      type: object
+      properties:
+        Condition:
+          type: string
+          description: "Condition is a premise upon which the fulfillment of an agreement depends \n\nGeneral and special arrangements, provisions, requirements, rules, specifications, and standards that form an integral part of an agreement or contract.\n\nRead more: http://www.businessdictionary.com/definition/terms-and-conditions.html\n\n"
+          format: class
+      description: The required status/situation and or tasks that need to be completed prior to the initiation of the workstep
+    name:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: 'A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT)'
+          format: datatype
+      description: Name by which a party is known and which is usually used to identify that party. (ISO20022)
+    partytypevalues:
+      enum:
+        - Person
+        - Organisation
+      type: string
+      description: ">\n* `Person` - Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). ISO20022\n* `Organisation` - Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution. ISO20022\n"
+    datetime:
+      type: object
+      properties:
+        DateTimeContent:
+          type: string
+          description: ''
+          format: string
+        TimeZoneCode:
+          type: string
+          description: ''
+          format: string
+        DaylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    value:
+      type: object
+      properties:
+        Value:
+          type: string
+          description: 'A value is the concept of worth in general that is assigned or is determined by measurement, assessment or calculation. (UN/CEFACT)'
+          format: datatype
+      description: ''
+    identifier:
+      type: object
+      properties:
+        IdentifierValue:
+          $ref: '#/components/schemas/value'
+        IdentifierIssuingAuthority:
+          $ref: '#/components/schemas/involvedparty'
+        IdentifierStartDate:
+          $ref: '#/components/schemas/datetime'
+        IdentifierEndDate:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyidentification:
+      type: object
+      properties:
+        PartyIdentificationType:
+          type: string
+          description: ''
+          format: partyidentificationtypevalues
+        PartyIdentification:
+          $ref: '#/components/schemas/identifier'
+      description: ''
+    party:
+      type: object
+      properties:
+        PartyName:
+          $ref: '#/components/schemas/name'
+        PartyType:
+          $ref: '#/components/schemas/partytypevalues'
+        PartyDateTime:
+          $ref: '#/components/schemas/datetime'
+        PartyIdentification:
+          $ref: '#/components/schemas/partyidentification'
+      description: ''
+    text:
+      type: object
+      properties:
+        Text:
+          type: string
+          description: Text is a character string such as a finite set of characters generally in the form of words of a language. (UN/CEFACT)
+          format: datatype
+      description: ''
+    datetimeperiod:
+      type: object
+      properties:
+        FromDateTime:
+          $ref: '#/components/schemas/datetime'
+        ToDateTime:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyinvolvementtypevalues:
+      enum:
+        - Agreementinvolvement
+        - Partyinvolvement
+        - Arrangementinvolvement
+        - Designspecificationinvolvement
+        - Relationshipinvolvement
+        - Locationinvolvement
+        - Bankguaranteeinvolvement
+      type: string
+      description: ">\n* `Agreementinvolvement` - \n* `Partyinvolvement` - \n* `Arrangementinvolvement` - \n* `Designspecificationinvolvement` - \n* `Relationshipinvolvement` - \n* `Locationinvolvement` - \n* `Bankguaranteeinvolvement` - \n"
+    partyrole:
+      type: object
+      properties:
+        PartyRoleType:
+          $ref: '#/components/schemas/text'
+        PartyRoleName:
+          $ref: '#/components/schemas/name'
+        PartyRoleValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        PartyInvolvementType:
+          $ref: '#/components/schemas/partyinvolvementtypevalues'
+      description: ''
+    involvedparty:
+      type: object
+      properties:
+        PartyReference:
+          $ref: '#/components/schemas/party'
+        PartyInvolvement:
+          $ref: '#/components/schemas/partyrole'
+      description: The operating unit/employee responsible for the workstep
+    schedule:
+      type: object
+      properties:
+        ScheduleType:
+          type: string
+          description: ''
+          format: string
+      description: The timing and key actions/milestones making up the workstep
+    businessservicetypevalues:
+      type: object
+      properties:
+        Businessservicetypevalues:
+          type: string
+          description: ''
+          format: enumeration
+      description: ''
+    businessservice:
+      type: object
+      properties:
+        BusinessServiceName:
+          $ref: '#/components/schemas/name'
+        BusinessServiceType:
+          $ref: '#/components/schemas/businessservicetypevalues'
+        BusinessServiceDescription:
+          $ref: '#/components/schemas/text'
+      description: The Market Trade Settlement Initiation Workstep specific Business Service
+    proceduretype:
+      type: object
+      properties:
+        ProcedureTypeName:
+          $ref: '#/components/schemas/name'
+        ProcedureType:
+          type: string
+          description: ''
+          format: proceduretypevalues
+      description: A Classification value that distinguishes between the type of process undertaken within Procedure
+    date:
+      type: object
+      properties:
+        DateContent:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instructiondate:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/date'
+        InstructionDateType:
+          type: string
+          description: ''
+          format: instructiondatetypevalues
+      description: ''
+    status:
+      type: object
+      properties:
+        StatusReason:
+          $ref: '#/components/schemas/text'
+        StatusDateTime:
+          $ref: '#/components/schemas/datetime'
+        StatusValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        StatusInvolvedParty:
+          $ref: '#/components/schemas/involvedparty'
+      description: ''
+    instructionlifecyclestatus:
+      type: object
+      properties:
+        InstructionLifecycleStatusType:
+          type: string
+          description: ''
+          format: instructionlifecylestatustypevalues
+        InstructionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+      description: 'A characteristic of instruction which refers to the LifecycleStatus of instruction (e.g., requested, executed, fulfilled, etc.); '
+    instructionidentification:
+      type: object
+      properties:
+        InstructionIdentifier:
+          $ref: '#/components/schemas/identifier'
+        InstructionIdentifierType:
+          type: string
+          description: ''
+          format: instructionidentificationtypevalues
+      description: "An identifier that allows to uniquely refer to an instance of an Instruction.\n"
+    instructiontypevalues:
+      enum:
+        - PaymentInstruction
+        - DeliveryOrder
+        - InformationRequest
+        - ExchangeInstruction
+        - AllocationInstruction
+        - MaintenanceInstruction
+      type: string
+      description: ">\n* `PaymentInstruction` - \n* `DeliveryOrder` - \n* `InformationRequest` - \n* `ExchangeInstruction` - \n* `AllocationInstruction` - \n* `MaintenanceInstruction` - \n"
+    log:
+      type: object
+      properties:
+        LogType:
+          type: string
+          description: ''
+          format: string
+        LogPeriod:
+          type: string
+          description: ''
+          format: string
+        LogDate:
+          type: string
+          description: Key dates associated with the log (e.g. start time).
+          format: string
+        LogIdentification:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instruction:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/instructiondate'
+        InstructionStatus:
+          $ref: '#/components/schemas/instructionlifecyclestatus'
+        InstructionIdentifier:
+          $ref: '#/components/schemas/instructionidentification'
+        InstructionType:
+          $ref: '#/components/schemas/instructiontypevalues'
+        InstructionResult:
+          $ref: '#/components/schemas/text'
+        InstructionDescription:
+          $ref: '#/components/schemas/text'
+        InstructionLog:
+          $ref: '#/components/schemas/log'
+        InstructionPurpose:
+          $ref: '#/components/schemas/text'
+      description: Request to process something (most refers to Asset Type)
+    procedure:
+      type: object
+      properties:
+        ProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        ProcedureDateTime:
+          $ref: '#/components/schemas/datetime'
+        ProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        ProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        ProcedureStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Market Trade Settlement Initiation Workstep
+    worksteptype:
+      type: object
+      properties:
+        WorkstepTypeName:
+          $ref: '#/components/schemas/name'
+        WorkstepType:
+          type: string
+          description: ''
+          format: worksteptypevalues
+      description: A Classification value that distinguishes between the type of workstep undertaken within Procedure
+    workstep:
+      type: object
+      properties:
+        WorkstepResult:
+          type: string
+          description: ''
+          format: string
+        WorkstepType:
+          $ref: '#/components/schemas/worksteptype'
+        WorkstepDescription:
+          $ref: '#/components/schemas/text'
+        WorkstepDateTime:
+          $ref: '#/components/schemas/datetime'
+        WorkstepStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Market Trade Settlement Initiation Workstep
+    MarketTradeSettlementInitiationWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        TradeClearingProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        MarketTradeSettlementInitiationWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        MarketTradeSettlementInitiationWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Market Trade Settlement Initiation Workstep in the context of executing the Market Trade Settlement Initiation Workstep
+    MarketTradeConfirmationWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        TradeClearingProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        MarketTradeConfirmationWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        MarketTradeConfirmationWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Market Trade Settlement Initiation Workstep in the context of executing the Market Trade Settlement Initiation Workstep
+    MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        TradeClearingProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        MarketTradeFundsandSecurityAvailabilityAssuranceWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        MarketTradeFundsandSecurityAvailabilityAssuranceWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Market Trade Settlement Initiation Workstep in the context of executing the Market Trade Settlement Initiation Workstep
+    MarketTradeOutTradeResolutionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        TradeClearingProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        MarketTradeOutTradeResolutionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        MarketTradeOutTradeResolutionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Market Trade Settlement Initiation Workstep in the context of executing the Market Trade Settlement Initiation Workstep
+    MarketTradeMatchingWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        TradeClearingProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        MarketTradeMatchingWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        MarketTradeMatchingWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Market Trade Settlement Initiation Workstep in the context of executing the Market Trade Settlement Initiation Workstep
+    workproduct:
+      type: object
+      properties:
+        WorkProductType:
+          type: string
+          description: ''
+          format: workproducttypevalues
+        WorkProductIdentifoication:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    TradeClearingOutcome:
+      type: object
+      properties:
+        TradeClearingWorkProduct:
+          $ref: '#/components/schemas/workproduct'
+        TradeClearingProcedure:
+          $ref: '#/components/schemas/procedure'
+      description: A course of action for doing Market Trade Settlement Initiation Workstep in the context of executing the Market Trade Settlement Initiation Workstep
+    feature:
+      type: object
+      properties:
+        FeatureType:
+          type: string
+          description: ''
+          format: string
+      description: A selected optional business service as subject matter of Trade Clearing Procedure
+    financialfacility:
+      type: object
+      properties:
+        FinancialFacility:
+          type: string
+          description: ''
+          format: class
+      description: Reference to the Financial Facility related to Trade Clearing Procedure
+    servicetype:
+      type: object
+      properties:
+        ServiceTypeName:
+          $ref: '#/components/schemas/name'
+        ServiceType:
+          type: string
+          description: ''
+          format: servicetypevalues
+      description: A Classification value that distinguishes between the type of services in Trade Clearing Procedure
+    productidentification:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/identifier'
+        ProductIdentificationType:
+          type: string
+          description: ''
+          format: productidentificationtypevalues
+      description: The identifier of product e.g. ISIN Code.
+    bankingproducttypevalues:
+      enum:
+        - LoanProduct
+        - CurrentAccountProduct
+        - SavingAccountProduct
+      type: string
+      description: ">\n* `LoanProduct` - \n* `CurrentAccountProduct` - \n* `SavingAccountProduct` - \n"
+    productlifecyclestatus:
+      type: object
+      properties:
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ProductLifecycleStatusType:
+          type: string
+          description: ''
+          format: productlifecyclestatustypevalues
+      description: 'Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).'
+    bankingproduct:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/productidentification'
+        ProductType:
+          $ref: '#/components/schemas/bankingproducttypevalues'
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/productlifecyclestatus'
+        ProductPriority:
+          $ref: '#/components/schemas/text'
+        ProductDescription:
+          $ref: '#/components/schemas/text'
+        ProductVersion:
+          $ref: '#/components/schemas/text'
+      description: Reference to the product or service that is related to Trade Clearing Procedure
+    transactiondate:
+      type: object
+      properties:
+        TransactionDate:
+          $ref: '#/components/schemas/datetime'
+        TransactionDateType:
+          type: string
+          description: ''
+          format: transactiondatetypevalues
+      description: "The Date that the transaction has occurred or is planned to occur.\nA characteristic of transaction which refers to the LifecycleDate of transaction (e.g., initiated date, executed date, fulfillment date). "
+    transactiontypevalues:
+      enum:
+        - FinancialTransaction
+        - BusinessTransaction
+        - BankingTransaction
+        - AccountingTransaction
+        - BookingTransaction
+        - AllocationTransaction
+        - DeliveryTransaction
+        - ProductionTransaction
+      type: string
+      description: ">\n* `FinancialTransaction` - \n* `BusinessTransaction` - \n* `BankingTransaction` - \n* `AccountingTransaction` - \n* `BookingTransaction` - \n* `AllocationTransaction` - \n* `DeliveryTransaction` - \n* `ProductionTransaction` - \n"
+    transactionlifecyclestatus:
+      type: object
+      properties:
+        TransactionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        TransactionLifecycleStatusType:
+          type: string
+          description: ''
+          format: transactionlifecyclestatustypevalues
+      description: 'A characteristic of transaction which refers to the LifecycleStatus of transaction (e.g., initiated, executed, confirmed, cancelled, etc.) '
+    transaction:
+      type: object
+      properties:
+        TransactionIdentification:
+          $ref: '#/components/schemas/identifier'
+        TransactionDate:
+          $ref: '#/components/schemas/transactiondate'
+        TransactionType:
+          $ref: '#/components/schemas/transactiontypevalues'
+        TransactionDescription:
+          $ref: '#/components/schemas/text'
+        TransactionStatus:
+          $ref: '#/components/schemas/transactionlifecyclestatus'
+        TransactionName:
+          $ref: '#/components/schemas/name'
+      description: Reference to the transaction that is related to Trade Clearing Procedure
+    actiontypevalues:
+      enum:
+        - Initiate
+        - Execute
+        - Create
+        - Transfer
+        - Pay
+        - Deliver
+        - Apply
+        - Calculate
+      type: string
+      description: ">\n* `Initiate` - \n* `Execute` - \n* `Create` - \n* `Transfer` - \n* `Pay` - \n* `Deliver` - \n* `Apply` - \n* `Calculate` - \n"
+    action:
+      type: object
+      properties:
+        ActionType:
+          $ref: '#/components/schemas/actiontypevalues'
+      description: ''
+    arrangementlifecyclestatus:
+      type: object
+      properties:
+        ArrangementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ArrangementLifecycleStatusType:
+          type: string
+          description: ''
+          format: arrangementlifecyclestatustypevalues
+      description: 'A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.)'
+    subject:
+      type: object
+      properties:
+        Subject:
+          type: string
+          description: A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.
+          format: class
+      description: ''
+    arrangementtypevalues:
+      enum:
+        - SweepArrangement
+        - WithdrawalArrangement
+        - DepositArrangement
+        - InterestArrangement
+        - FeeArrangement
+        - LienArrangement
+        - InformationArrangement
+        - PaymentServiceArrangement
+        - EntitlementArrangement
+        - PeriodArrangement
+        - CollateralArrangement
+        - LimitArrangement
+        - AccessArrangement
+        - CardPaymentArrangement
+        - StandingOrderArrangement
+        - OverdraftArrangement
+        - RepaymentArrangement
+        - StatementArrangement
+        - CreditTransferArrangement
+        - ProductAndServiceArrangement
+        - FactoringArrangement
+        - RolloverArrangement
+      type: string
+      description: ">\n* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.\n* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. \n* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. \n* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.\n* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. \n* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. \n* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account\n* `PaymentServiceArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. \n* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement\n* `PeriodArrangement` - \n* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. \n* `LimitArrangement` - An arrangement to limit something\ne.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. \n* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point\n* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. \n* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. \n* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. \n* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. \n* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. \n* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. \n* `ProductAndServiceArrangement` - \n* `FactoringArrangement` - \n* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement\n\ni.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer \n"
+    arrangement:
+      type: object
+      properties:
+        ArrangementAction:
+          $ref: '#/components/schemas/action'
+        ArrangementStartDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementEndDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementStatus:
+          $ref: '#/components/schemas/arrangementlifecyclestatus'
+        ArrangementSubjectMatter:
+          $ref: '#/components/schemas/subject'
+        Arrangementtype:
+          $ref: '#/components/schemas/arrangementtypevalues'
+      description: Reference to the Financial Transaction Arrangement that is related to Trade Clearing Procedure
+    agreementtypevalues:
+      enum:
+        - CustomerAgreement
+        - SupplierAgreement
+        - BrokerAgreement
+        - SalesAgreement
+        - PurchaseAgreement
+        - MaintenanceAgreement
+        - ProductAgreement
+        - ProductSalesAgreement
+        - ResourceAgreement
+      type: string
+      description: ">\n* `CustomerAgreement` - \n* `SupplierAgreement` - \n* `BrokerAgreement` - \n* `SalesAgreement` - \n* `PurchaseAgreement` - \n* `MaintenanceAgreement` - \n* `ProductAgreement` - \n* `ProductSalesAgreement` - \n* `ResourceAgreement` - \n"
+    agreementlifecyclestatus:
+      type: object
+      properties:
+        AgreementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        AgreementLifecycleStatusType:
+          type: string
+          description: ''
+          format: agreementlifecyclestatustypevalues
+      description: 'A characteristic of agreement which refers to the LifecycleStatus of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).'
+    agreement:
+      type: object
+      properties:
+        AgreementSignedDate:
+          $ref: '#/components/schemas/date'
+        AgreementType:
+          $ref: '#/components/schemas/agreementtypevalues'
+        AgreementValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        AgreementVersion:
+          $ref: '#/components/schemas/text'
+        AgreementStatus:
+          $ref: '#/components/schemas/agreementlifecyclestatus'
+        AgreementSubjectMatter:
+          $ref: '#/components/schemas/text'
+        AgreementIdentification:
+          $ref: '#/components/schemas/identifier'
+        AgreementDate:
+          $ref: '#/components/schemas/datetime'
+      description: Reference to the Customer Agreement that is related to Trade Clearing Procedure
+    TradeClearingProcedure:
+      type: object
+      properties:
+        TradeClearingProcedureParameterType:
+          $ref: '#/components/schemas/text'
+        TradeClearingProcedureSelectedOption:
+          $ref: '#/components/schemas/feature'
+        TradeClearingProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        TradeClearingProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        TradeClearingProcedureStatus:
+          $ref: '#/components/schemas/status'
+        TradeClearingProcedureAssociatedPartyReference:
+          $ref: '#/components/schemas/involvedparty'
+        TradeClearingProcedureBusinessUnitReference:
+          $ref: '#/components/schemas/involvedparty'
+        TradeClearingProcedureServiceProviderReference:
+          $ref: '#/components/schemas/involvedparty'
+        TradeClearingProcedureFinancialFacilityReference:
+          $ref: '#/components/schemas/financialfacility'
+        TradeClearingProcedureEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        TradeClearingProcedureCustomerReference:
+          $ref: '#/components/schemas/involvedparty'
+        TradeClearingProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        TradeClearingProcedureServiceProviderSchedule:
+          $ref: '#/components/schemas/schedule'
+        TradeClearingProcedureServiceType:
+          $ref: '#/components/schemas/servicetype'
+        TradeClearingProcedureProductandServiceType:
+          type: string
+          description: A Classification value that distinguishes between the type of products/services related to Trade Clearing Procedure
+          format: bankingproducttype
+        TradeClearingProcedureProductandServiceInstance:
+          $ref: '#/components/schemas/bankingproduct'
+        TradeClearingProcedureTransactionType:
+          type: string
+          description: A Classification value that distinguishes between the type of transactions in Trade Clearing Procedure
+          format: transactiontype
+        TradeClearingProcedureTransaction:
+          $ref: '#/components/schemas/transaction'
+        TradeClearingProcedureFinancialTransactionArrangement:
+          $ref: '#/components/schemas/arrangement'
+        TradeClearingProcedureCustomerAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        TradeClearingProcedureReference:
+          $ref: '#/components/schemas/procedure'
+      description: 'Complete work tasks following a defined procedure in support of general office activities and product and service delivery within Trade Clearing. '
+    ControlTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Control Trade Clearing Procedure'
+    ControlTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Control Trade Clearing Procedure'
+    ExchangeTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Exchange Trade Clearing Procedure'
+    ExchangeTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Exchange Trade Clearing Procedure'
+    ExecuteTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Execute Trade Clearing Procedure'
+    ExecuteTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Execute Trade Clearing Procedure'
+    InitiateTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Initiate Trade Clearing Procedure'
+    InitiateTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Initiate Trade Clearing Procedure'
+    NotifyTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Notify Trade Clearing Procedure'
+    NotifyTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Notify Trade Clearing Procedure'
+    RequestTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Request Trade Clearing Procedure'
+    RequestTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Request Trade Clearing Procedure'
+    RetrieveTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Retrieve Trade Clearing Procedure'
+    RetrieveTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Retrieve Trade Clearing Procedure'
+    UpdateTradeClearingProcedureRequest:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Update Trade Clearing Procedure'
+    UpdateTradeClearingProcedureResponse:
+      type: object
+      properties:
+        TradeClearingProcedure:
+          type: object
+          properties:
+            TradeClearingProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            TradeClearingProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            TradeClearingProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            TradeClearingProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureStatus:
+              $ref: '#/components/schemas/status'
+            TradeClearingProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            TradeClearingProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            TradeClearingProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            TradeClearingProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            TradeClearingProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            TradeClearingProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            TradeClearingProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            TradeClearingProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            TradeClearingProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            TradeClearingProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            TradeClearingProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Update Trade Clearing Procedure'
+  responses:
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFound:
+      description: NotFound
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequests:
+      description: TooManyRequests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: InternalServerError
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ControlTradeClearingProcedureResponse:
+      description: ControlTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlTradeClearingProcedureResponse'
+    ExchangeTradeClearingProcedureResponse:
+      description: ExchangeTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeTradeClearingProcedureResponse'
+    ExecuteTradeClearingProcedureResponse:
+      description: ExecuteTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteTradeClearingProcedureResponse'
+    InitiateTradeClearingProcedureResponse:
+      description: InitiateTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateTradeClearingProcedureResponse'
+    NotifyTradeClearingProcedureResponse:
+      description: NotifyTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NotifyTradeClearingProcedureResponse'
+    RequestTradeClearingProcedureResponse:
+      description: RequestTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestTradeClearingProcedureResponse'
+    RetrieveTradeClearingProcedureResponse:
+      description: RetrieveTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RetrieveTradeClearingProcedureResponse'
+    UpdateTradeClearingProcedureResponse:
+      description: UpdateTradeClearingProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateTradeClearingProcedureResponse'
+    MarketTradeConfirmationWorkstep:
+      description: MarketTradeConfirmationWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeConfirmationWorkstep'
+    MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep:
+      description: MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+    MarketTradeMatchingWorkstep:
+      description: MarketTradeMatchingWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeMatchingWorkstep'
+    MarketTradeOutTradeResolutionWorkstep:
+      description: MarketTradeOutTradeResolutionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeOutTradeResolutionWorkstep'
+    MarketTradeSettlementInitiationWorkstep:
+      description: MarketTradeSettlementInitiationWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeSettlementInitiationWorkstep'
+  parameters:
+    tradeclearingid:
+      name: tradeclearingid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    markettradeconfirmationworkstepid:
+      name: markettradeconfirmationworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    markettradefundsandsecurityavailabilityassuranceworkstepid:
+      name: markettradefundsandsecurityavailabilityassuranceworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    markettradematchingworkstepid:
+      name: markettradematchingworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    markettradeouttraderesolutionworkstepid:
+      name: markettradeouttraderesolutionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    markettradesettlementinitiationworkstepid:
+      name: markettradesettlementinitiationworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  requestBodies:
+    ControlTradeClearingProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlTradeClearingProcedureRequest'
+      required: true
+    ExchangeTradeClearingProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeTradeClearingProcedureRequest'
+      required: true
+    ExecuteTradeClearingProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteTradeClearingProcedureRequest'
+      required: true
+    InitiateTradeClearingProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateTradeClearingProcedureRequest'
+      required: true
+    RequestTradeClearingProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestTradeClearingProcedureRequest'
+      required: true
+    UpdateTradeClearingProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateTradeClearingProcedureRequest'
+      required: true
+    MarketTradeConfirmationWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeConfirmationWorkstep'
+      required: true
+    MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeFundsandSecurityAvailabilityAssuranceWorkstep'
+      required: true
+    MarketTradeMatchingWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeMatchingWorkstep'
+      required: true
+    MarketTradeOutTradeResolutionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeOutTradeResolutionWorkstep'
+      required: true
+    MarketTradeSettlementInitiationWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/MarketTradeSettlementInitiationWorkstep'
+      required: true

@@ -1,0 +1,2457 @@
+openapi: 3.0.1
+info:
+  title: Servicing Issue
+  description: This Service Domain handles production customer servicing issues detected in the customer servicing environment
+  contact:
+    name: BIAN
+    url: https://bian.org
+  version: 11.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/BIAN-3/BIAN/ServicingIssue/11.0.0
+paths:
+  '/ServicingIssue/{servicingissueid}/Control':
+    put:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Control Servicing Issue Procedure
+      description: Control Servicing Issue Procedure
+      operationId: Control
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      requestBody:
+        $ref: '#/components/requestBodies/ControlServicingIssueProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ControlServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/Exchange':
+    put:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Exchange Servicing Issue Procedure
+      description: Exchange Servicing Issue Procedure
+      operationId: Exchange
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExchangeServicingIssueProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExchangeServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/Execute':
+    put:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Execute Servicing Issue Procedure
+      description: Execute Servicing Issue Procedure
+      operationId: Execute
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExecuteServicingIssueProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExecuteServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /ServicingIssue/Initiate:
+    post:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Initiate Servicing Issue Procedure
+      description: Initiate Servicing Issue Procedure
+      operationId: Initiate
+      requestBody:
+        $ref: '#/components/requestBodies/InitiateServicingIssueProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/InitiateServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/Notify':
+    get:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Notify Servicing Issue Procedure
+      description: Notify Servicing Issue Procedure
+      operationId: Notify
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      responses:
+        '200':
+          $ref: '#/components/responses/NotifyServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/Request':
+    put:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Request Servicing Issue Procedure
+      description: Request Servicing Issue Procedure
+      operationId: Request
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      requestBody:
+        $ref: '#/components/requestBodies/RequestServicingIssueProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/RequestServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/Retrieve':
+    get:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Retrieve Servicing Issue Procedure
+      description: Retrieve Servicing Issue Procedure
+      operationId: Retrieve
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      responses:
+        '200':
+          $ref: '#/components/responses/RetrieveServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/Update':
+    put:
+      tags:
+        - CR - ServicingIssueProcedure
+      summary: Update Servicing Issue Procedure
+      description: Update Servicing Issue Procedure
+      operationId: Update
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateServicingIssueProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UpdateServicingIssueProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Exchange Production Issue Analysis Workstep
+      description: Exchange Production Issue Analysis Workstep
+      operationId: ExchangeProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueAnalysisWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Exchange Production Issue Determination Workstep
+      description: Exchange Production Issue Determination Workstep
+      operationId: ExchangeProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueDeterminationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Exchange Production Issue Resolution Workstep
+      description: Exchange Production Issue Resolution Workstep
+      operationId: ExchangeProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Execute Production Issue Analysis Workstep
+      description: Execute Production Issue Analysis Workstep
+      operationId: ExecuteProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueAnalysisWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Execute Production Issue Determination Workstep
+      description: Execute Production Issue Determination Workstep
+      operationId: ExecuteProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueDeterminationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Execute Production Issue Resolution Workstep
+      description: Execute Production Issue Resolution Workstep
+      operationId: ExecuteProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Initiate Production Issue Analysis Workstep
+      description: Initiate Production Issue Analysis Workstep
+      operationId: InitiateProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueAnalysisWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Initiate Production Issue Determination Workstep
+      description: Initiate Production Issue Determination Workstep
+      operationId: InitiateProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueDeterminationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Initiate Production Issue Resolution Workstep
+      description: Initiate Production Issue Resolution Workstep
+      operationId: InitiateProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Notify Production Issue Analysis Workstep
+      description: Notify Production Issue Analysis Workstep
+      operationId: NotifyProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Notify Production Issue Determination Workstep
+      description: Notify Production Issue Determination Workstep
+      operationId: NotifyProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Notify Production Issue Resolution Workstep
+      description: Notify Production Issue Resolution Workstep
+      operationId: NotifyProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Request':
+    put:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Request Production Issue Analysis Workstep
+      description: Request Production Issue Analysis Workstep
+      operationId: RequestProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueAnalysisWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Request':
+    put:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Request Production Issue Determination Workstep
+      description: Request Production Issue Determination Workstep
+      operationId: RequestProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueDeterminationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Request Production Issue Resolution Workstep
+      description: Request Production Issue Resolution Workstep
+      operationId: RequestProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Retrieve Production Issue Analysis Workstep
+      description: Retrieve Production Issue Analysis Workstep
+      operationId: RetrieveProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Retrieve Production Issue Determination Workstep
+      description: Retrieve Production Issue Determination Workstep
+      operationId: RetrieveProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Retrieve Production Issue Resolution Workstep
+      description: Retrieve Production Issue Resolution Workstep
+      operationId: RetrieveProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueAnalysisWorkstep/{productionissueanalysisworkstepid}/Update':
+    put:
+      tags:
+        - BQ - ProductionIssueAnalysisWorkstep
+      summary: Update Production Issue Analysis Workstep
+      description: Update Production Issue Analysis Workstep
+      operationId: UpdateProductionIssueAnalysisWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueanalysisworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueAnalysisWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueAnalysisWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueDeterminationWorkstep/{productionissuedeterminationworkstepid}/Update':
+    put:
+      tags:
+        - BQ - ProductionIssueDeterminationWorkstep
+      summary: Update Production Issue Determination Workstep
+      description: Update Production Issue Determination Workstep
+      operationId: UpdateProductionIssueDeterminationWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissuedeterminationworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueDeterminationWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueDeterminationWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/ServicingIssue/{servicingissueid}/ProductionIssueResolutionWorkstep/{productionissueresolutionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - ProductionIssueResolutionWorkstep
+      summary: Update Production Issue Resolution Workstep
+      description: Update Production Issue Resolution Workstep
+      operationId: UpdateProductionIssueResolutionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/servicingissueid'
+        - $ref: '#/components/parameters/productionissueresolutionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/ProductionIssueResolutionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/ProductionIssueResolutionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+          format: string
+        status:
+          type: string
+          format: string
+        message:
+          type: string
+          format: string
+      description: Status Attributes
+    condition:
+      type: object
+      properties:
+        Condition:
+          type: string
+          description: "Condition is a premise upon which the fulfillment of an agreement depends \n\nGeneral and special arrangements, provisions, requirements, rules, specifications, and standards that form an integral part of an agreement or contract.\n\nRead more: http://www.businessdictionary.com/definition/terms-and-conditions.html\n\n"
+          format: class
+      description: The required status/situation and or tasks that need to be completed prior to the initiation of the workstep
+    name:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: 'A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT)'
+          format: datatype
+      description: Name by which a party is known and which is usually used to identify that party. (ISO20022)
+    partytypevalues:
+      enum:
+        - Person
+        - Organisation
+      type: string
+      description: ">\n* `Person` - Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). ISO20022\n* `Organisation` - Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution. ISO20022\n"
+    datetime:
+      type: object
+      properties:
+        DateTimeContent:
+          type: string
+          description: ''
+          format: string
+        TimeZoneCode:
+          type: string
+          description: ''
+          format: string
+        DaylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    value:
+      type: object
+      properties:
+        Value:
+          type: string
+          description: 'A value is the concept of worth in general that is assigned or is determined by measurement, assessment or calculation. (UN/CEFACT)'
+          format: datatype
+      description: ''
+    identifier:
+      type: object
+      properties:
+        IdentifierValue:
+          $ref: '#/components/schemas/value'
+        IdentifierIssuingAuthority:
+          $ref: '#/components/schemas/involvedparty'
+        IdentifierStartDate:
+          $ref: '#/components/schemas/datetime'
+        IdentifierEndDate:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyidentification:
+      type: object
+      properties:
+        PartyIdentificationType:
+          type: string
+          description: ''
+          format: partyidentificationtypevalues
+        PartyIdentification:
+          $ref: '#/components/schemas/identifier'
+      description: ''
+    party:
+      type: object
+      properties:
+        PartyName:
+          $ref: '#/components/schemas/name'
+        PartyType:
+          $ref: '#/components/schemas/partytypevalues'
+        PartyDateTime:
+          $ref: '#/components/schemas/datetime'
+        PartyIdentification:
+          $ref: '#/components/schemas/partyidentification'
+      description: ''
+    text:
+      type: object
+      properties:
+        Text:
+          type: string
+          description: Text is a character string such as a finite set of characters generally in the form of words of a language. (UN/CEFACT)
+          format: datatype
+      description: ''
+    datetimeperiod:
+      type: object
+      properties:
+        FromDateTime:
+          $ref: '#/components/schemas/datetime'
+        ToDateTime:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyinvolvementtypevalues:
+      enum:
+        - Agreementinvolvement
+        - Partyinvolvement
+        - Arrangementinvolvement
+        - Designspecificationinvolvement
+        - Relationshipinvolvement
+        - Locationinvolvement
+        - Bankguaranteeinvolvement
+      type: string
+      description: ">\n* `Agreementinvolvement` - \n* `Partyinvolvement` - \n* `Arrangementinvolvement` - \n* `Designspecificationinvolvement` - \n* `Relationshipinvolvement` - \n* `Locationinvolvement` - \n* `Bankguaranteeinvolvement` - \n"
+    partyrole:
+      type: object
+      properties:
+        PartyRoleType:
+          $ref: '#/components/schemas/text'
+        PartyRoleName:
+          $ref: '#/components/schemas/name'
+        PartyRoleValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        PartyInvolvementType:
+          $ref: '#/components/schemas/partyinvolvementtypevalues'
+      description: ''
+    involvedparty:
+      type: object
+      properties:
+        PartyReference:
+          $ref: '#/components/schemas/party'
+        PartyInvolvement:
+          $ref: '#/components/schemas/partyrole'
+      description: The operating unit/employee responsible for the workstep
+    schedule:
+      type: object
+      properties:
+        ScheduleType:
+          type: string
+          description: ''
+          format: string
+      description: The timing and key actions/milestones making up the workstep
+    businessservicetypevalues:
+      type: object
+      properties:
+        Businessservicetypevalues:
+          type: string
+          description: ''
+          format: enumeration
+      description: ''
+    businessservice:
+      type: object
+      properties:
+        BusinessServiceName:
+          $ref: '#/components/schemas/name'
+        BusinessServiceType:
+          $ref: '#/components/schemas/businessservicetypevalues'
+        BusinessServiceDescription:
+          $ref: '#/components/schemas/text'
+      description: The Production Issue Resolution Workstep specific Business Service
+    proceduretype:
+      type: object
+      properties:
+        ProcedureTypeName:
+          $ref: '#/components/schemas/name'
+        ProcedureType:
+          type: string
+          description: ''
+          format: proceduretypevalues
+      description: A Classification value that distinguishes between the type of process undertaken within Procedure
+    date:
+      type: object
+      properties:
+        DateContent:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instructiondate:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/date'
+        InstructionDateType:
+          type: string
+          description: ''
+          format: instructiondatetypevalues
+      description: ''
+    status:
+      type: object
+      properties:
+        StatusReason:
+          $ref: '#/components/schemas/text'
+        StatusDateTime:
+          $ref: '#/components/schemas/datetime'
+        StatusValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        StatusInvolvedParty:
+          $ref: '#/components/schemas/involvedparty'
+      description: ''
+    instructionlifecyclestatus:
+      type: object
+      properties:
+        InstructionLifecycleStatusType:
+          type: string
+          description: ''
+          format: instructionlifecylestatustypevalues
+        InstructionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+      description: 'A characteristic of instruction which refers to the LifecycleStatus of instruction (e.g., requested, executed, fulfilled, etc.); '
+    instructionidentification:
+      type: object
+      properties:
+        InstructionIdentifier:
+          $ref: '#/components/schemas/identifier'
+        InstructionIdentifierType:
+          type: string
+          description: ''
+          format: instructionidentificationtypevalues
+      description: "An identifier that allows to uniquely refer to an instance of an Instruction.\n"
+    instructiontypevalues:
+      enum:
+        - PaymentInstruction
+        - DeliveryOrder
+        - InformationRequest
+        - ExchangeInstruction
+        - AllocationInstruction
+        - MaintenanceInstruction
+      type: string
+      description: ">\n* `PaymentInstruction` - \n* `DeliveryOrder` - \n* `InformationRequest` - \n* `ExchangeInstruction` - \n* `AllocationInstruction` - \n* `MaintenanceInstruction` - \n"
+    log:
+      type: object
+      properties:
+        LogType:
+          type: string
+          description: ''
+          format: string
+        LogPeriod:
+          type: string
+          description: ''
+          format: string
+        LogDate:
+          type: string
+          description: Key dates associated with the log (e.g. start time).
+          format: string
+        LogIdentification:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instruction:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/instructiondate'
+        InstructionStatus:
+          $ref: '#/components/schemas/instructionlifecyclestatus'
+        InstructionIdentifier:
+          $ref: '#/components/schemas/instructionidentification'
+        InstructionType:
+          $ref: '#/components/schemas/instructiontypevalues'
+        InstructionResult:
+          $ref: '#/components/schemas/text'
+        InstructionDescription:
+          $ref: '#/components/schemas/text'
+        InstructionLog:
+          $ref: '#/components/schemas/log'
+        InstructionPurpose:
+          $ref: '#/components/schemas/text'
+      description: Request to process something (most refers to Asset Type)
+    procedure:
+      type: object
+      properties:
+        ProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        ProcedureDateTime:
+          $ref: '#/components/schemas/datetime'
+        ProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        ProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        ProcedureStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Production Issue Resolution Workstep
+    worksteptype:
+      type: object
+      properties:
+        WorkstepTypeName:
+          $ref: '#/components/schemas/name'
+        WorkstepType:
+          type: string
+          description: ''
+          format: worksteptypevalues
+      description: A Classification value that distinguishes between the type of workstep undertaken within Procedure
+    workstep:
+      type: object
+      properties:
+        WorkstepResult:
+          type: string
+          description: ''
+          format: string
+        WorkstepType:
+          $ref: '#/components/schemas/worksteptype'
+        WorkstepDescription:
+          $ref: '#/components/schemas/text'
+        WorkstepDateTime:
+          $ref: '#/components/schemas/datetime'
+        WorkstepStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Production Issue Resolution Workstep
+    ProductionIssueResolutionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        ServicingIssueProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        ProductionIssueResolutionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        ProductionIssueResolutionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Production Issue Resolution Workstep in the context of executing the Production Issue Resolution Workstep
+    ProductionIssueDeterminationWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        ServicingIssueProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        ProductionIssueDeterminationWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        ProductionIssueDeterminationWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Production Issue Resolution Workstep in the context of executing the Production Issue Resolution Workstep
+    ProductionIssueAnalysisWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        ServicingIssueProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        ProductionIssueAnalysisWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        ProductionIssueAnalysisWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Production Issue Resolution Workstep in the context of executing the Production Issue Resolution Workstep
+    workproduct:
+      type: object
+      properties:
+        WorkProductType:
+          type: string
+          description: ''
+          format: workproducttypevalues
+        WorkProductIdentifoication:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    ServicingIssueOutcome:
+      type: object
+      properties:
+        ServicingIssueWorkProduct:
+          $ref: '#/components/schemas/workproduct'
+        ServicingIssueProcedure:
+          $ref: '#/components/schemas/procedure'
+      description: A course of action for doing Production Issue Resolution Workstep in the context of executing the Production Issue Resolution Workstep
+    feature:
+      type: object
+      properties:
+        FeatureType:
+          type: string
+          description: ''
+          format: string
+      description: A selected optional business service as subject matter of Servicing Issue Procedure
+    financialfacility:
+      type: object
+      properties:
+        FinancialFacility:
+          type: string
+          description: ''
+          format: class
+      description: Reference to the Financial Facility related to Servicing Issue Procedure
+    servicetype:
+      type: object
+      properties:
+        ServiceTypeName:
+          $ref: '#/components/schemas/name'
+        ServiceType:
+          type: string
+          description: ''
+          format: servicetypevalues
+      description: A Classification value that distinguishes between the type of services in Servicing Issue Procedure
+    productidentification:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/identifier'
+        ProductIdentificationType:
+          type: string
+          description: ''
+          format: productidentificationtypevalues
+      description: The identifier of product e.g. ISIN Code.
+    bankingproducttypevalues:
+      enum:
+        - LoanProduct
+        - CurrentAccountProduct
+        - SavingAccountProduct
+      type: string
+      description: ">\n* `LoanProduct` - \n* `CurrentAccountProduct` - \n* `SavingAccountProduct` - \n"
+    productlifecyclestatus:
+      type: object
+      properties:
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ProductLifecycleStatusType:
+          type: string
+          description: ''
+          format: productlifecyclestatustypevalues
+      description: 'Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).'
+    bankingproduct:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/productidentification'
+        ProductType:
+          $ref: '#/components/schemas/bankingproducttypevalues'
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/productlifecyclestatus'
+        ProductPriority:
+          $ref: '#/components/schemas/text'
+        ProductDescription:
+          $ref: '#/components/schemas/text'
+        ProductVersion:
+          $ref: '#/components/schemas/text'
+      description: Reference to the product or service that is related to Servicing Issue Procedure
+    transactiondate:
+      type: object
+      properties:
+        TransactionDate:
+          $ref: '#/components/schemas/datetime'
+        TransactionDateType:
+          type: string
+          description: ''
+          format: transactiondatetypevalues
+      description: "The Date that the transaction has occurred or is planned to occur.\nA characteristic of transaction which refers to the LifecycleDate of transaction (e.g., initiated date, executed date, fulfillment date). "
+    transactiontypevalues:
+      enum:
+        - FinancialTransaction
+        - BusinessTransaction
+        - BankingTransaction
+        - AccountingTransaction
+        - BookingTransaction
+        - AllocationTransaction
+        - DeliveryTransaction
+        - ProductionTransaction
+      type: string
+      description: ">\n* `FinancialTransaction` - \n* `BusinessTransaction` - \n* `BankingTransaction` - \n* `AccountingTransaction` - \n* `BookingTransaction` - \n* `AllocationTransaction` - \n* `DeliveryTransaction` - \n* `ProductionTransaction` - \n"
+    transactionlifecyclestatus:
+      type: object
+      properties:
+        TransactionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        TransactionLifecycleStatusType:
+          type: string
+          description: ''
+          format: transactionlifecyclestatustypevalues
+      description: 'A characteristic of transaction which refers to the LifecycleStatus of transaction (e.g., initiated, executed, confirmed, cancelled, etc.) '
+    transaction:
+      type: object
+      properties:
+        TransactionIdentification:
+          $ref: '#/components/schemas/identifier'
+        TransactionDate:
+          $ref: '#/components/schemas/transactiondate'
+        TransactionType:
+          $ref: '#/components/schemas/transactiontypevalues'
+        TransactionDescription:
+          $ref: '#/components/schemas/text'
+        TransactionStatus:
+          $ref: '#/components/schemas/transactionlifecyclestatus'
+        TransactionName:
+          $ref: '#/components/schemas/name'
+      description: Reference to the transaction that is related to Servicing Issue Procedure
+    actiontypevalues:
+      enum:
+        - Initiate
+        - Execute
+        - Create
+        - Transfer
+        - Pay
+        - Deliver
+        - Apply
+        - Calculate
+      type: string
+      description: ">\n* `Initiate` - \n* `Execute` - \n* `Create` - \n* `Transfer` - \n* `Pay` - \n* `Deliver` - \n* `Apply` - \n* `Calculate` - \n"
+    action:
+      type: object
+      properties:
+        ActionType:
+          $ref: '#/components/schemas/actiontypevalues'
+      description: ''
+    arrangementlifecyclestatus:
+      type: object
+      properties:
+        ArrangementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ArrangementLifecycleStatusType:
+          type: string
+          description: ''
+          format: arrangementlifecyclestatustypevalues
+      description: 'A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.)'
+    subject:
+      type: object
+      properties:
+        Subject:
+          type: string
+          description: A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.
+          format: class
+      description: ''
+    arrangementtypevalues:
+      enum:
+        - SweepArrangement
+        - WithdrawalArrangement
+        - DepositArrangement
+        - InterestArrangement
+        - FeeArrangement
+        - LienArrangement
+        - InformationArrangement
+        - PaymentServiceArrangement
+        - EntitlementArrangement
+        - PeriodArrangement
+        - CollateralArrangement
+        - LimitArrangement
+        - AccessArrangement
+        - CardPaymentArrangement
+        - StandingOrderArrangement
+        - OverdraftArrangement
+        - RepaymentArrangement
+        - StatementArrangement
+        - CreditTransferArrangement
+        - ProductAndServiceArrangement
+        - FactoringArrangement
+        - RolloverArrangement
+      type: string
+      description: ">\n* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.\n* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. \n* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. \n* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.\n* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. \n* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. \n* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account\n* `PaymentServiceArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. \n* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement\n* `PeriodArrangement` - \n* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. \n* `LimitArrangement` - An arrangement to limit something\ne.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. \n* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point\n* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. \n* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. \n* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. \n* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. \n* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. \n* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. \n* `ProductAndServiceArrangement` - \n* `FactoringArrangement` - \n* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement\n\ni.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer \n"
+    arrangement:
+      type: object
+      properties:
+        ArrangementAction:
+          $ref: '#/components/schemas/action'
+        ArrangementStartDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementEndDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementStatus:
+          $ref: '#/components/schemas/arrangementlifecyclestatus'
+        ArrangementSubjectMatter:
+          $ref: '#/components/schemas/subject'
+        Arrangementtype:
+          $ref: '#/components/schemas/arrangementtypevalues'
+      description: Reference to the Financial Transaction Arrangement that is related to Servicing Issue Procedure
+    agreementtypevalues:
+      enum:
+        - CustomerAgreement
+        - SupplierAgreement
+        - BrokerAgreement
+        - SalesAgreement
+        - PurchaseAgreement
+        - MaintenanceAgreement
+        - ProductAgreement
+        - ProductSalesAgreement
+        - ResourceAgreement
+      type: string
+      description: ">\n* `CustomerAgreement` - \n* `SupplierAgreement` - \n* `BrokerAgreement` - \n* `SalesAgreement` - \n* `PurchaseAgreement` - \n* `MaintenanceAgreement` - \n* `ProductAgreement` - \n* `ProductSalesAgreement` - \n* `ResourceAgreement` - \n"
+    agreementlifecyclestatus:
+      type: object
+      properties:
+        AgreementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        AgreementLifecycleStatusType:
+          type: string
+          description: ''
+          format: agreementlifecyclestatustypevalues
+      description: 'A characteristic of agreement which refers to the LifecycleStatus of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).'
+    agreement:
+      type: object
+      properties:
+        AgreementSignedDate:
+          $ref: '#/components/schemas/date'
+        AgreementType:
+          $ref: '#/components/schemas/agreementtypevalues'
+        AgreementValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        AgreementVersion:
+          $ref: '#/components/schemas/text'
+        AgreementStatus:
+          $ref: '#/components/schemas/agreementlifecyclestatus'
+        AgreementSubjectMatter:
+          $ref: '#/components/schemas/text'
+        AgreementIdentification:
+          $ref: '#/components/schemas/identifier'
+        AgreementDate:
+          $ref: '#/components/schemas/datetime'
+      description: Reference to the Customer Agreement that is related to Servicing Issue Procedure
+    ServicingIssueProcedure:
+      type: object
+      properties:
+        ServicingIssueProcedureParameterType:
+          $ref: '#/components/schemas/text'
+        ServicingIssueProcedureSelectedOption:
+          $ref: '#/components/schemas/feature'
+        ServicingIssueProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        ServicingIssueProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        ServicingIssueProcedureStatus:
+          $ref: '#/components/schemas/status'
+        ServicingIssueProcedureAssociatedPartyReference:
+          $ref: '#/components/schemas/involvedparty'
+        ServicingIssueProcedureBusinessUnitReference:
+          $ref: '#/components/schemas/involvedparty'
+        ServicingIssueProcedureServiceProviderReference:
+          $ref: '#/components/schemas/involvedparty'
+        ServicingIssueProcedureFinancialFacilityReference:
+          $ref: '#/components/schemas/financialfacility'
+        ServicingIssueProcedureEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        ServicingIssueProcedureCustomerReference:
+          $ref: '#/components/schemas/involvedparty'
+        ServicingIssueProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        ServicingIssueProcedureServiceProviderSchedule:
+          $ref: '#/components/schemas/schedule'
+        ServicingIssueProcedureServiceType:
+          $ref: '#/components/schemas/servicetype'
+        ServicingIssueProcedureProductandServiceType:
+          type: string
+          description: A Classification value that distinguishes between the type of products/services related to Servicing Issue Procedure
+          format: bankingproducttype
+        ServicingIssueProcedureProductandServiceInstance:
+          $ref: '#/components/schemas/bankingproduct'
+        ServicingIssueProcedureTransactionType:
+          type: string
+          description: A Classification value that distinguishes between the type of transactions in Servicing Issue Procedure
+          format: transactiontype
+        ServicingIssueProcedureTransaction:
+          $ref: '#/components/schemas/transaction'
+        ServicingIssueProcedureFinancialTransactionArrangement:
+          $ref: '#/components/schemas/arrangement'
+        ServicingIssueProcedureCustomerAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        ServicingIssueProcedureReference:
+          $ref: '#/components/schemas/procedure'
+      description: 'Complete work tasks following a defined procedure in support of general office activities and product and service delivery within Servicing Issue. '
+    ControlServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Control Servicing Issue Procedure'
+    ControlServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Control Servicing Issue Procedure'
+    ExchangeServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Exchange Servicing Issue Procedure'
+    ExchangeServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Exchange Servicing Issue Procedure'
+    ExecuteServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Execute Servicing Issue Procedure'
+    ExecuteServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Execute Servicing Issue Procedure'
+    InitiateServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Initiate Servicing Issue Procedure'
+    InitiateServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Initiate Servicing Issue Procedure'
+    NotifyServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Notify Servicing Issue Procedure'
+    NotifyServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Notify Servicing Issue Procedure'
+    RequestServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Request Servicing Issue Procedure'
+    RequestServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Request Servicing Issue Procedure'
+    RetrieveServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Retrieve Servicing Issue Procedure'
+    RetrieveServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Retrieve Servicing Issue Procedure'
+    UpdateServicingIssueProcedureRequest:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Update Servicing Issue Procedure'
+    UpdateServicingIssueProcedureResponse:
+      type: object
+      properties:
+        ServicingIssueProcedure:
+          type: object
+          properties:
+            ServicingIssueProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            ServicingIssueProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            ServicingIssueProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            ServicingIssueProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureStatus:
+              $ref: '#/components/schemas/status'
+            ServicingIssueProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            ServicingIssueProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            ServicingIssueProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            ServicingIssueProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            ServicingIssueProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            ServicingIssueProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            ServicingIssueProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            ServicingIssueProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            ServicingIssueProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            ServicingIssueProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            ServicingIssueProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Update Servicing Issue Procedure'
+  responses:
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFound:
+      description: NotFound
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequests:
+      description: TooManyRequests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: InternalServerError
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ControlServicingIssueProcedureResponse:
+      description: ControlServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlServicingIssueProcedureResponse'
+    ExchangeServicingIssueProcedureResponse:
+      description: ExchangeServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeServicingIssueProcedureResponse'
+    ExecuteServicingIssueProcedureResponse:
+      description: ExecuteServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteServicingIssueProcedureResponse'
+    InitiateServicingIssueProcedureResponse:
+      description: InitiateServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateServicingIssueProcedureResponse'
+    NotifyServicingIssueProcedureResponse:
+      description: NotifyServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NotifyServicingIssueProcedureResponse'
+    RequestServicingIssueProcedureResponse:
+      description: RequestServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestServicingIssueProcedureResponse'
+    RetrieveServicingIssueProcedureResponse:
+      description: RetrieveServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RetrieveServicingIssueProcedureResponse'
+    UpdateServicingIssueProcedureResponse:
+      description: UpdateServicingIssueProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateServicingIssueProcedureResponse'
+    ProductionIssueAnalysisWorkstep:
+      description: ProductionIssueAnalysisWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ProductionIssueAnalysisWorkstep'
+    ProductionIssueDeterminationWorkstep:
+      description: ProductionIssueDeterminationWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ProductionIssueDeterminationWorkstep'
+    ProductionIssueResolutionWorkstep:
+      description: ProductionIssueResolutionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ProductionIssueResolutionWorkstep'
+  parameters:
+    servicingissueid:
+      name: servicingissueid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    productionissueanalysisworkstepid:
+      name: productionissueanalysisworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    productionissuedeterminationworkstepid:
+      name: productionissuedeterminationworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    productionissueresolutionworkstepid:
+      name: productionissueresolutionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  requestBodies:
+    ControlServicingIssueProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlServicingIssueProcedureRequest'
+      required: true
+    ExchangeServicingIssueProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeServicingIssueProcedureRequest'
+      required: true
+    ExecuteServicingIssueProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteServicingIssueProcedureRequest'
+      required: true
+    InitiateServicingIssueProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateServicingIssueProcedureRequest'
+      required: true
+    RequestServicingIssueProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestServicingIssueProcedureRequest'
+      required: true
+    UpdateServicingIssueProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateServicingIssueProcedureRequest'
+      required: true
+    ProductionIssueAnalysisWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ProductionIssueAnalysisWorkstep'
+      required: true
+    ProductionIssueDeterminationWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ProductionIssueDeterminationWorkstep'
+      required: true
+    ProductionIssueResolutionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ProductionIssueResolutionWorkstep'
+      required: true

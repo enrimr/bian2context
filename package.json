@@ -3,7 +3,13 @@
   "version": "0.1.0",
   "description": "CLI tool to parse multiple OpenAPI (YAML/JSON) files from BIAN and generate a compact summary for Domain-Driven Design (DDD) analysis. It extracts Service Domains, Entities, and Domain Events, with optional abbreviation compression to reduce token size for LLM prompts.",
   "bin": {
-    "dir2context": "./index.js"
+    "bian2context": "./bin/bian2context.js"
+  },
+  "main": "src/lib.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand"
   },
   "keywords": [
     "llm",
@@ -35,6 +41,6 @@
     "js-yaml": "^4.1.0"
   },
   "devDependencies": {
-    "jest": "^30.0.5"
+    "jest": "^29.7.0"
   }
 }

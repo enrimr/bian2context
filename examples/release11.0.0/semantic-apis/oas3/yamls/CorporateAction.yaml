@@ -1,0 +1,2905 @@
+openapi: 3.0.1
+info:
+  title: Corporate Action
+  description: This Service Domain supports the various custodial tasks associated with processing associated corporate actions for customer's with securities held at the bank
+  contact:
+    name: BIAN
+    url: https://bian.org
+  version: 11.0.0
+servers:
+  - url: https://virtserver.swaggerhub.com/BIAN-3/BIAN/CorporateAction/11.0.0
+paths:
+  '/CorporateAction/{corporateactionid}/Control':
+    put:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Control Corporate Action Procedure
+      description: Control Corporate Action Procedure
+      operationId: Control
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      requestBody:
+        $ref: '#/components/requestBodies/ControlCorporateActionProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ControlCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/Exchange':
+    put:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Exchange Corporate Action Procedure
+      description: Exchange Corporate Action Procedure
+      operationId: Exchange
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExchangeCorporateActionProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExchangeCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/Execute':
+    put:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Execute Corporate Action Procedure
+      description: Execute Corporate Action Procedure
+      operationId: Execute
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      requestBody:
+        $ref: '#/components/requestBodies/ExecuteCorporateActionProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/ExecuteCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  /CorporateAction/Initiate:
+    post:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Initiate Corporate Action Procedure
+      description: Initiate Corporate Action Procedure
+      operationId: Initiate
+      requestBody:
+        $ref: '#/components/requestBodies/InitiateCorporateActionProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/InitiateCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/Notify':
+    get:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Notify Corporate Action Procedure
+      description: Notify Corporate Action Procedure
+      operationId: Notify
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      responses:
+        '200':
+          $ref: '#/components/responses/NotifyCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/Request':
+    put:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Request Corporate Action Procedure
+      description: Request Corporate Action Procedure
+      operationId: Request
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      requestBody:
+        $ref: '#/components/requestBodies/RequestCorporateActionProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/RequestCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/Retrieve':
+    get:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Retrieve Corporate Action Procedure
+      description: Retrieve Corporate Action Procedure
+      operationId: Retrieve
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      responses:
+        '200':
+          $ref: '#/components/responses/RetrieveCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/Update':
+    put:
+      tags:
+        - CR - CorporateActionProcedure
+      summary: Update Corporate Action Procedure
+      description: Update Corporate Action Procedure
+      operationId: Update
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateCorporateActionProcedureRequest'
+      responses:
+        '200':
+          $ref: '#/components/responses/UpdateCorporateActionProcedureResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Exchange Security Dividend Payment Workstep
+      description: Exchange Security Dividend Payment Workstep
+      operationId: ExchangeSecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityDividendPaymentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Exchange Security Mergers and Acquisition Action Workstep
+      description: Exchange Security Mergers and Acquisition Action Workstep
+      operationId: ExchangeSecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityMergersandAcquisitionActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Exchange Security Rights Issue Action Workstep
+      description: Exchange Security Rights Issue Action Workstep
+      operationId: ExchangeSecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityRightsIssueActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Exchange Security Spin-Off Action Workstep
+      description: Exchange Security Spin-Off Action Workstep
+      operationId: ExchangeSecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecuritySpin-OffActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Exchange':
+    put:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Exchange Stock Split or Reversal Action Workstep
+      description: Exchange Stock Split or Reversal Action Workstep
+      operationId: ExchangeStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/StockSplitorReversalActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Execute Security Dividend Payment Workstep
+      description: Execute Security Dividend Payment Workstep
+      operationId: ExecuteSecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityDividendPaymentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Execute Security Mergers and Acquisition Action Workstep
+      description: Execute Security Mergers and Acquisition Action Workstep
+      operationId: ExecuteSecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityMergersandAcquisitionActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Execute Security Rights Issue Action Workstep
+      description: Execute Security Rights Issue Action Workstep
+      operationId: ExecuteSecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityRightsIssueActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Execute Security Spin-Off Action Workstep
+      description: Execute Security Spin-Off Action Workstep
+      operationId: ExecuteSecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecuritySpin-OffActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Execute':
+    put:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Execute Stock Split or Reversal Action Workstep
+      description: Execute Stock Split or Reversal Action Workstep
+      operationId: ExecuteStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/StockSplitorReversalActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Initiate Security Dividend Payment Workstep
+      description: Initiate Security Dividend Payment Workstep
+      operationId: InitiateSecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityDividendPaymentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Initiate Security Mergers and Acquisition Action Workstep
+      description: Initiate Security Mergers and Acquisition Action Workstep
+      operationId: InitiateSecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityMergersandAcquisitionActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Initiate Security Rights Issue Action Workstep
+      description: Initiate Security Rights Issue Action Workstep
+      operationId: InitiateSecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityRightsIssueActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Initiate Security Spin-Off Action Workstep
+      description: Initiate Security Spin-Off Action Workstep
+      operationId: InitiateSecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecuritySpin-OffActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Initiate':
+    post:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Initiate Stock Split or Reversal Action Workstep
+      description: Initiate Stock Split or Reversal Action Workstep
+      operationId: InitiateStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/StockSplitorReversalActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Notify Security Dividend Payment Workstep
+      description: Notify Security Dividend Payment Workstep
+      operationId: NotifySecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Notify Security Mergers and Acquisition Action Workstep
+      description: Notify Security Mergers and Acquisition Action Workstep
+      operationId: NotifySecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Notify Security Rights Issue Action Workstep
+      description: Notify Security Rights Issue Action Workstep
+      operationId: NotifySecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Notify Security Spin-Off Action Workstep
+      description: Notify Security Spin-Off Action Workstep
+      operationId: NotifySecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Notify':
+    get:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Notify Stock Split or Reversal Action Workstep
+      description: Notify Stock Split or Reversal Action Workstep
+      operationId: NotifyStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Request':
+    put:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Request Security Dividend Payment Workstep
+      description: Request Security Dividend Payment Workstep
+      operationId: RequestSecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityDividendPaymentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Request Security Mergers and Acquisition Action Workstep
+      description: Request Security Mergers and Acquisition Action Workstep
+      operationId: RequestSecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityMergersandAcquisitionActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Request Security Rights Issue Action Workstep
+      description: Request Security Rights Issue Action Workstep
+      operationId: RequestSecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityRightsIssueActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Request Security Spin-Off Action Workstep
+      description: Request Security Spin-Off Action Workstep
+      operationId: RequestSecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecuritySpin-OffActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Request':
+    put:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Request Stock Split or Reversal Action Workstep
+      description: Request Stock Split or Reversal Action Workstep
+      operationId: RequestStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/StockSplitorReversalActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Retrieve Security Dividend Payment Workstep
+      description: Retrieve Security Dividend Payment Workstep
+      operationId: RetrieveSecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Retrieve Security Mergers and Acquisition Action Workstep
+      description: Retrieve Security Mergers and Acquisition Action Workstep
+      operationId: RetrieveSecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Retrieve Security Rights Issue Action Workstep
+      description: Retrieve Security Rights Issue Action Workstep
+      operationId: RetrieveSecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Retrieve Security Spin-Off Action Workstep
+      description: Retrieve Security Spin-Off Action Workstep
+      operationId: RetrieveSecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Retrieve':
+    get:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Retrieve Stock Split or Reversal Action Workstep
+      description: Retrieve Stock Split or Reversal Action Workstep
+      operationId: RetrieveStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityDividendPaymentWorkstep/{securitydividendpaymentworkstepid}/Update':
+    put:
+      tags:
+        - BQ - SecurityDividendPaymentWorkstep
+      summary: Update Security Dividend Payment Workstep
+      description: Update Security Dividend Payment Workstep
+      operationId: UpdateSecurityDividendPaymentWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitydividendpaymentworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityDividendPaymentWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityDividendPaymentWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityMergersandAcquisitionActionWorkstep/{securitymergersandacquisitionactionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - SecurityMergersandAcquisitionActionWorkstep
+      summary: Update Security Mergers and Acquisition Action Workstep
+      description: Update Security Mergers and Acquisition Action Workstep
+      operationId: UpdateSecurityMergersandAcquisitionActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securitymergersandacquisitionactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityMergersandAcquisitionActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityMergersandAcquisitionActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecurityRightsIssueActionWorkstep/{securityrightsissueactionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - SecurityRightsIssueActionWorkstep
+      summary: Update Security Rights Issue Action Workstep
+      description: Update Security Rights Issue Action Workstep
+      operationId: UpdateSecurityRightsIssueActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityrightsissueactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecurityRightsIssueActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecurityRightsIssueActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/SecuritySpin-OffActionWorkstep/{securityspin-offactionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - SecuritySpin-OffActionWorkstep
+      summary: Update Security Spin-Off Action Workstep
+      description: Update Security Spin-Off Action Workstep
+      operationId: UpdateSecuritySpin-OffActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/securityspin-offactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/SecuritySpin-OffActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/SecuritySpin-OffActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+  '/CorporateAction/{corporateactionid}/StockSplitorReversalActionWorkstep/{stocksplitorreversalactionworkstepid}/Update':
+    put:
+      tags:
+        - BQ - StockSplitorReversalActionWorkstep
+      summary: Update Stock Split or Reversal Action Workstep
+      description: Update Stock Split or Reversal Action Workstep
+      operationId: UpdateStockSplitorReversalActionWorkstep
+      parameters:
+        - $ref: '#/components/parameters/corporateactionid'
+        - $ref: '#/components/parameters/stocksplitorreversalactionworkstepid'
+      requestBody:
+        $ref: '#/components/requestBodies/StockSplitorReversalActionWorkstep'
+      responses:
+        '200':
+          $ref: '#/components/responses/StockSplitorReversalActionWorkstep'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+components:
+  schemas:
+    HTTPError:
+      type: object
+      properties:
+        status_code:
+          type: string
+          format: string
+        status:
+          type: string
+          format: string
+        message:
+          type: string
+          format: string
+      description: Status Attributes
+    condition:
+      type: object
+      properties:
+        Condition:
+          type: string
+          description: "Condition is a premise upon which the fulfillment of an agreement depends \n\nGeneral and special arrangements, provisions, requirements, rules, specifications, and standards that form an integral part of an agreement or contract.\n\nRead more: http://www.businessdictionary.com/definition/terms-and-conditions.html\n\n"
+          format: class
+      description: The required status/situation and or tasks that need to be completed prior to the initiation of the workstep
+    name:
+      type: object
+      properties:
+        Name:
+          type: string
+          description: 'A name is a word or phrase that constitutes the distinctive designation of a person, place, thing or concept. (UN/CEFAT)'
+          format: datatype
+      description: Name by which a party is known and which is usually used to identify that party. (ISO20022)
+    partytypevalues:
+      enum:
+        - Person
+        - Organisation
+      type: string
+      description: ">\n* `Person` - Human entity, as distinguished from a corporate entity (which is sometimes referred to as an 'artificial person'). ISO20022\n* `Organisation` - Organised structure that is set up for a particular purpose. For example, a business, government body, department, charity, or financial institution. ISO20022\n"
+    datetime:
+      type: object
+      properties:
+        DateTimeContent:
+          type: string
+          description: ''
+          format: string
+        TimeZoneCode:
+          type: string
+          description: ''
+          format: string
+        DaylightSavingIndicator:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    value:
+      type: object
+      properties:
+        Value:
+          type: string
+          description: 'A value is the concept of worth in general that is assigned or is determined by measurement, assessment or calculation. (UN/CEFACT)'
+          format: datatype
+      description: ''
+    identifier:
+      type: object
+      properties:
+        IdentifierValue:
+          $ref: '#/components/schemas/value'
+        IdentifierIssuingAuthority:
+          $ref: '#/components/schemas/involvedparty'
+        IdentifierStartDate:
+          $ref: '#/components/schemas/datetime'
+        IdentifierEndDate:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyidentification:
+      type: object
+      properties:
+        PartyIdentificationType:
+          type: string
+          description: ''
+          format: partyidentificationtypevalues
+        PartyIdentification:
+          $ref: '#/components/schemas/identifier'
+      description: ''
+    party:
+      type: object
+      properties:
+        PartyName:
+          $ref: '#/components/schemas/name'
+        PartyType:
+          $ref: '#/components/schemas/partytypevalues'
+        PartyDateTime:
+          $ref: '#/components/schemas/datetime'
+        PartyIdentification:
+          $ref: '#/components/schemas/partyidentification'
+      description: ''
+    text:
+      type: object
+      properties:
+        Text:
+          type: string
+          description: Text is a character string such as a finite set of characters generally in the form of words of a language. (UN/CEFACT)
+          format: datatype
+      description: ''
+    datetimeperiod:
+      type: object
+      properties:
+        FromDateTime:
+          $ref: '#/components/schemas/datetime'
+        ToDateTime:
+          $ref: '#/components/schemas/datetime'
+      description: ''
+    partyinvolvementtypevalues:
+      enum:
+        - Agreementinvolvement
+        - Partyinvolvement
+        - Arrangementinvolvement
+        - Designspecificationinvolvement
+        - Relationshipinvolvement
+        - Locationinvolvement
+        - Bankguaranteeinvolvement
+      type: string
+      description: ">\n* `Agreementinvolvement` - \n* `Partyinvolvement` - \n* `Arrangementinvolvement` - \n* `Designspecificationinvolvement` - \n* `Relationshipinvolvement` - \n* `Locationinvolvement` - \n* `Bankguaranteeinvolvement` - \n"
+    partyrole:
+      type: object
+      properties:
+        PartyRoleType:
+          $ref: '#/components/schemas/text'
+        PartyRoleName:
+          $ref: '#/components/schemas/name'
+        PartyRoleValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        PartyInvolvementType:
+          $ref: '#/components/schemas/partyinvolvementtypevalues'
+      description: ''
+    involvedparty:
+      type: object
+      properties:
+        PartyReference:
+          $ref: '#/components/schemas/party'
+        PartyInvolvement:
+          $ref: '#/components/schemas/partyrole'
+      description: The operating unit/employee responsible for the workstep
+    schedule:
+      type: object
+      properties:
+        ScheduleType:
+          type: string
+          description: ''
+          format: string
+      description: The timing and key actions/milestones making up the workstep
+    businessservicetypevalues:
+      type: object
+      properties:
+        Businessservicetypevalues:
+          type: string
+          description: ''
+          format: enumeration
+      description: ''
+    businessservice:
+      type: object
+      properties:
+        BusinessServiceName:
+          $ref: '#/components/schemas/name'
+        BusinessServiceType:
+          $ref: '#/components/schemas/businessservicetypevalues'
+        BusinessServiceDescription:
+          $ref: '#/components/schemas/text'
+      description: The Security Spin-Off Action Workstep specific Business Service
+    proceduretype:
+      type: object
+      properties:
+        ProcedureTypeName:
+          $ref: '#/components/schemas/name'
+        ProcedureType:
+          type: string
+          description: ''
+          format: proceduretypevalues
+      description: A Classification value that distinguishes between the type of process undertaken within Procedure
+    date:
+      type: object
+      properties:
+        DateContent:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instructiondate:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/date'
+        InstructionDateType:
+          type: string
+          description: ''
+          format: instructiondatetypevalues
+      description: ''
+    status:
+      type: object
+      properties:
+        StatusReason:
+          $ref: '#/components/schemas/text'
+        StatusDateTime:
+          $ref: '#/components/schemas/datetime'
+        StatusValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        StatusInvolvedParty:
+          $ref: '#/components/schemas/involvedparty'
+      description: ''
+    instructionlifecyclestatus:
+      type: object
+      properties:
+        InstructionLifecycleStatusType:
+          type: string
+          description: ''
+          format: instructionlifecylestatustypevalues
+        InstructionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+      description: 'A characteristic of instruction which refers to the LifecycleStatus of instruction (e.g., requested, executed, fulfilled, etc.); '
+    instructionidentification:
+      type: object
+      properties:
+        InstructionIdentifier:
+          $ref: '#/components/schemas/identifier'
+        InstructionIdentifierType:
+          type: string
+          description: ''
+          format: instructionidentificationtypevalues
+      description: "An identifier that allows to uniquely refer to an instance of an Instruction.\n"
+    instructiontypevalues:
+      enum:
+        - PaymentInstruction
+        - DeliveryOrder
+        - InformationRequest
+        - ExchangeInstruction
+        - AllocationInstruction
+        - MaintenanceInstruction
+      type: string
+      description: ">\n* `PaymentInstruction` - \n* `DeliveryOrder` - \n* `InformationRequest` - \n* `ExchangeInstruction` - \n* `AllocationInstruction` - \n* `MaintenanceInstruction` - \n"
+    log:
+      type: object
+      properties:
+        LogType:
+          type: string
+          description: ''
+          format: string
+        LogPeriod:
+          type: string
+          description: ''
+          format: string
+        LogDate:
+          type: string
+          description: Key dates associated with the log (e.g. start time).
+          format: string
+        LogIdentification:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    instruction:
+      type: object
+      properties:
+        InstructionDate:
+          $ref: '#/components/schemas/instructiondate'
+        InstructionStatus:
+          $ref: '#/components/schemas/instructionlifecyclestatus'
+        InstructionIdentifier:
+          $ref: '#/components/schemas/instructionidentification'
+        InstructionType:
+          $ref: '#/components/schemas/instructiontypevalues'
+        InstructionResult:
+          $ref: '#/components/schemas/text'
+        InstructionDescription:
+          $ref: '#/components/schemas/text'
+        InstructionLog:
+          $ref: '#/components/schemas/log'
+        InstructionPurpose:
+          $ref: '#/components/schemas/text'
+      description: Request to process something (most refers to Asset Type)
+    procedure:
+      type: object
+      properties:
+        ProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        ProcedureDateTime:
+          $ref: '#/components/schemas/datetime'
+        ProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        ProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        ProcedureStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Security Spin-Off Action Workstep
+    worksteptype:
+      type: object
+      properties:
+        WorkstepTypeName:
+          $ref: '#/components/schemas/name'
+        WorkstepType:
+          type: string
+          description: ''
+          format: worksteptypevalues
+      description: A Classification value that distinguishes between the type of workstep undertaken within Procedure
+    workstep:
+      type: object
+      properties:
+        WorkstepResult:
+          type: string
+          description: ''
+          format: string
+        WorkstepType:
+          $ref: '#/components/schemas/worksteptype'
+        WorkstepDescription:
+          $ref: '#/components/schemas/text'
+        WorkstepDateTime:
+          $ref: '#/components/schemas/datetime'
+        WorkstepStatus:
+          $ref: '#/components/schemas/status'
+      description: Reference to Security Spin-Off Action Workstep
+    SecuritySpin-OffActionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        CorporateActionProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        SecuritySpin-OffActionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        SecuritySpin-OffActionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Security Spin-Off Action Workstep in the context of executing the Security Spin-Off Action Workstep
+    SecurityMergersandAcquisitionActionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        CorporateActionProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        SecurityMergersandAcquisitionActionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        SecurityMergersandAcquisitionActionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Security Spin-Off Action Workstep in the context of executing the Security Spin-Off Action Workstep
+    SecurityRightsIssueActionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        CorporateActionProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        SecurityRightsIssueActionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        SecurityRightsIssueActionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Security Spin-Off Action Workstep in the context of executing the Security Spin-Off Action Workstep
+    SecurityDividendPaymentWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        CorporateActionProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        SecurityDividendPaymentWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        SecurityDividendPaymentWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Security Spin-Off Action Workstep in the context of executing the Security Spin-Off Action Workstep
+    StockSplitorReversalActionWorkstep:
+      type: object
+      properties:
+        Preconditions:
+          $ref: '#/components/schemas/condition'
+        BusinessUnitEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        Schedule:
+          $ref: '#/components/schemas/schedule'
+        BusinessService:
+          $ref: '#/components/schemas/businessservice'
+        Postconditions:
+          $ref: '#/components/schemas/condition'
+        CorporateActionProcedureReference:
+          $ref: '#/components/schemas/procedure'
+        StockSplitorReversalActionWorkstepReference:
+          $ref: '#/components/schemas/workstep'
+        StockSplitorReversalActionWorkstepType:
+          $ref: '#/components/schemas/text'
+      description: A course of action for doing Security Spin-Off Action Workstep in the context of executing the Security Spin-Off Action Workstep
+    workproduct:
+      type: object
+      properties:
+        WorkProductType:
+          type: string
+          description: ''
+          format: workproducttypevalues
+        WorkProductIdentifoication:
+          type: string
+          description: ''
+          format: string
+      description: ''
+    CorporateActionOutcome:
+      type: object
+      properties:
+        CorporateActionWorkProduct:
+          $ref: '#/components/schemas/workproduct'
+        CorporateActionProcedure:
+          $ref: '#/components/schemas/procedure'
+      description: A course of action for doing Security Spin-Off Action Workstep in the context of executing the Security Spin-Off Action Workstep
+    feature:
+      type: object
+      properties:
+        FeatureType:
+          type: string
+          description: ''
+          format: string
+      description: A selected optional business service as subject matter of Corporate Action Procedure
+    financialfacility:
+      type: object
+      properties:
+        FinancialFacility:
+          type: string
+          description: ''
+          format: class
+      description: Reference to the Financial Facility related to Corporate Action Procedure
+    servicetype:
+      type: object
+      properties:
+        ServiceTypeName:
+          $ref: '#/components/schemas/name'
+        ServiceType:
+          type: string
+          description: ''
+          format: servicetypevalues
+      description: A Classification value that distinguishes between the type of services in Corporate Action Procedure
+    productidentification:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/identifier'
+        ProductIdentificationType:
+          type: string
+          description: ''
+          format: productidentificationtypevalues
+      description: The identifier of product e.g. ISIN Code.
+    bankingproducttypevalues:
+      enum:
+        - LoanProduct
+        - CurrentAccountProduct
+        - SavingAccountProduct
+      type: string
+      description: ">\n* `LoanProduct` - \n* `CurrentAccountProduct` - \n* `SavingAccountProduct` - \n"
+    productlifecyclestatus:
+      type: object
+      properties:
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ProductLifecycleStatusType:
+          type: string
+          description: ''
+          format: productlifecyclestatustypevalues
+      description: 'Refers to the lifecycle of a product (e.g., initiated, announced, active, obsolete, withdrawn).'
+    bankingproduct:
+      type: object
+      properties:
+        ProductIdentification:
+          $ref: '#/components/schemas/productidentification'
+        ProductType:
+          $ref: '#/components/schemas/bankingproducttypevalues'
+        ProductLifecycleStatus:
+          $ref: '#/components/schemas/productlifecyclestatus'
+        ProductPriority:
+          $ref: '#/components/schemas/text'
+        ProductDescription:
+          $ref: '#/components/schemas/text'
+        ProductVersion:
+          $ref: '#/components/schemas/text'
+      description: Reference to the product or service that is related to Corporate Action Procedure
+    transactiondate:
+      type: object
+      properties:
+        TransactionDate:
+          $ref: '#/components/schemas/datetime'
+        TransactionDateType:
+          type: string
+          description: ''
+          format: transactiondatetypevalues
+      description: "The Date that the transaction has occurred or is planned to occur.\nA characteristic of transaction which refers to the LifecycleDate of transaction (e.g., initiated date, executed date, fulfillment date). "
+    transactiontypevalues:
+      enum:
+        - FinancialTransaction
+        - BusinessTransaction
+        - BankingTransaction
+        - AccountingTransaction
+        - BookingTransaction
+        - AllocationTransaction
+        - DeliveryTransaction
+        - ProductionTransaction
+      type: string
+      description: ">\n* `FinancialTransaction` - \n* `BusinessTransaction` - \n* `BankingTransaction` - \n* `AccountingTransaction` - \n* `BookingTransaction` - \n* `AllocationTransaction` - \n* `DeliveryTransaction` - \n* `ProductionTransaction` - \n"
+    transactionlifecyclestatus:
+      type: object
+      properties:
+        TransactionLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        TransactionLifecycleStatusType:
+          type: string
+          description: ''
+          format: transactionlifecyclestatustypevalues
+      description: 'A characteristic of transaction which refers to the LifecycleStatus of transaction (e.g., initiated, executed, confirmed, cancelled, etc.) '
+    transaction:
+      type: object
+      properties:
+        TransactionIdentification:
+          $ref: '#/components/schemas/identifier'
+        TransactionDate:
+          $ref: '#/components/schemas/transactiondate'
+        TransactionType:
+          $ref: '#/components/schemas/transactiontypevalues'
+        TransactionDescription:
+          $ref: '#/components/schemas/text'
+        TransactionStatus:
+          $ref: '#/components/schemas/transactionlifecyclestatus'
+        TransactionName:
+          $ref: '#/components/schemas/name'
+      description: Reference to the transaction that is related to Corporate Action Procedure
+    actiontypevalues:
+      enum:
+        - Initiate
+        - Execute
+        - Create
+        - Transfer
+        - Pay
+        - Deliver
+        - Apply
+        - Calculate
+      type: string
+      description: ">\n* `Initiate` - \n* `Execute` - \n* `Create` - \n* `Transfer` - \n* `Pay` - \n* `Deliver` - \n* `Apply` - \n* `Calculate` - \n"
+    action:
+      type: object
+      properties:
+        ActionType:
+          $ref: '#/components/schemas/actiontypevalues'
+      description: ''
+    arrangementlifecyclestatus:
+      type: object
+      properties:
+        ArrangementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        ArrangementLifecycleStatusType:
+          type: string
+          description: ''
+          format: arrangementlifecyclestatustypevalues
+      description: 'A characteristic of arrangement which refers to the LifecycleStatus of arrangement (e.g., requested, proposed, offered, accepted, cancelled, terminated, fulfilled, etc.)'
+    subject:
+      type: object
+      properties:
+        Subject:
+          type: string
+          description: A thing that is discussed or dealt whit in agreement/arrangement about doing or not doing (as action) something.
+          format: class
+      description: ''
+    arrangementtypevalues:
+      enum:
+        - SweepArrangement
+        - WithdrawalArrangement
+        - DepositArrangement
+        - InterestArrangement
+        - FeeArrangement
+        - LienArrangement
+        - InformationArrangement
+        - PaymentServiceArrangement
+        - EntitlementArrangement
+        - PeriodArrangement
+        - CollateralArrangement
+        - LimitArrangement
+        - AccessArrangement
+        - CardPaymentArrangement
+        - StandingOrderArrangement
+        - OverdraftArrangement
+        - RepaymentArrangement
+        - StatementArrangement
+        - CreditTransferArrangement
+        - ProductAndServiceArrangement
+        - FactoringArrangement
+        - RolloverArrangement
+      type: string
+      description: ">\n* `SweepArrangement` - An arrangement into which is promised for the set-up and execution of structured sweeps to and from the facility to a linked account.\n* `WithdrawalArrangement` - An arrangement into which is promised to deliver Withdraw Service  to take fund out of an account. \n* `DepositArrangement` - An arrangement into which is promised to deliver Deposit Service  to place funds into an account for safekeeping. \n* `InterestArrangement` - An arrangement into which is promised to apply a pricing element expressed in a percentage  to a principal amount.\n* `FeeArrangement` - An arrangement into which is promised to apply a charge for services rendered. \n* `LienArrangement` - An arrangement into which is promised for placing a lien or block on the account for a specified purpose, amount, and period. \n* `InformationArrangement` - An arrangement concerning the information the bank will provide about the agreement/account\n* `PaymentServiceArrangement` - An arrangement into which is promised to deliver a specific payment service including regular payments, standing orders, direct debits and bill pay instructions. \n* `EntitlementArrangement` - Right or obligation linked to the involvement of a party in an agreement\n* `PeriodArrangement` - \n* `CollateralArrangement` - An arrangement into which is promised for handling the oversight of the allocation, valuation and administration of collateral associated with the facility. \n* `LimitArrangement` - An arrangement to limit something\ne.g., the number of transaction per week, the amount of money allowed to withdraw per week/day and etc. \n* `AccessArrangement` - An arrangement that allows or restricts the access to a service or product, channel or device through a specific access point\n* `CardPaymentArrangement` - An arrangement into which is promised to deliver Card payment Service to execute payment transactions through a payment card, including online payments. \n* `StandingOrderArrangement` - An arrangement into which is promised to deliver Standing Order Service to make regular transfers on given dates to a named beneﬁciary. \n* `OverdraftArrangement` - An arrangement into which is promised to deliver Overdraft Service  that allows fund transfer even if there is no provision on the account. \n* `RepaymentArrangement` - An arrangement into which is promised for paying back money previously borrowed from a lender. \n* `StatementArrangement` - An arrangement into which is promised to deliver a reporting service on payment transactions registered on an account. \n* `CreditTransferArrangement` - An arrangement into which is promised to allow a payer to transfer fund to a beneficiary. \n* `ProductAndServiceArrangement` - \n* `FactoringArrangement` - \n* `RolloverArrangement` - Arrangement stipulating the modalities for an automatic renewal of the agreement\n\ni.e. the replacement of the agreement with a new one without renewed negociation and witout explicit agreement of the customer \n"
+    arrangement:
+      type: object
+      properties:
+        ArrangementAction:
+          $ref: '#/components/schemas/action'
+        ArrangementStartDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementEndDate:
+          $ref: '#/components/schemas/datetime'
+        ArrangementStatus:
+          $ref: '#/components/schemas/arrangementlifecyclestatus'
+        ArrangementSubjectMatter:
+          $ref: '#/components/schemas/subject'
+        Arrangementtype:
+          $ref: '#/components/schemas/arrangementtypevalues'
+      description: Reference to the Financial Transaction Arrangement that is related to Corporate Action Procedure
+    agreementtypevalues:
+      enum:
+        - CustomerAgreement
+        - SupplierAgreement
+        - BrokerAgreement
+        - SalesAgreement
+        - PurchaseAgreement
+        - MaintenanceAgreement
+        - ProductAgreement
+        - ProductSalesAgreement
+        - ResourceAgreement
+      type: string
+      description: ">\n* `CustomerAgreement` - \n* `SupplierAgreement` - \n* `BrokerAgreement` - \n* `SalesAgreement` - \n* `PurchaseAgreement` - \n* `MaintenanceAgreement` - \n* `ProductAgreement` - \n* `ProductSalesAgreement` - \n* `ResourceAgreement` - \n"
+    agreementlifecyclestatus:
+      type: object
+      properties:
+        AgreementLifecycleStatus:
+          $ref: '#/components/schemas/status'
+        AgreementLifecycleStatusType:
+          type: string
+          description: ''
+          format: agreementlifecyclestatustypevalues
+      description: 'A characteristic of agreement which refers to the LifecycleStatus of agreement (e.g., potential, offered, confirmed, completed, signed, terminated).'
+    agreement:
+      type: object
+      properties:
+        AgreementSignedDate:
+          $ref: '#/components/schemas/date'
+        AgreementType:
+          $ref: '#/components/schemas/agreementtypevalues'
+        AgreementValidityPeriod:
+          $ref: '#/components/schemas/datetimeperiod'
+        AgreementVersion:
+          $ref: '#/components/schemas/text'
+        AgreementStatus:
+          $ref: '#/components/schemas/agreementlifecyclestatus'
+        AgreementSubjectMatter:
+          $ref: '#/components/schemas/text'
+        AgreementIdentification:
+          $ref: '#/components/schemas/identifier'
+        AgreementDate:
+          $ref: '#/components/schemas/datetime'
+      description: Reference to the Customer Agreement that is related to Corporate Action Procedure
+    CorporateActionProcedure:
+      type: object
+      properties:
+        CorporateActionProcedureParameterType:
+          $ref: '#/components/schemas/text'
+        CorporateActionProcedureSelectedOption:
+          $ref: '#/components/schemas/feature'
+        CorporateActionProcedureRequest:
+          $ref: '#/components/schemas/instruction'
+        CorporateActionProcedureSchedule:
+          $ref: '#/components/schemas/schedule'
+        CorporateActionProcedureStatus:
+          $ref: '#/components/schemas/status'
+        CorporateActionProcedureAssociatedPartyReference:
+          $ref: '#/components/schemas/involvedparty'
+        CorporateActionProcedureBusinessUnitReference:
+          $ref: '#/components/schemas/involvedparty'
+        CorporateActionProcedureServiceProviderReference:
+          $ref: '#/components/schemas/involvedparty'
+        CorporateActionProcedureFinancialFacilityReference:
+          $ref: '#/components/schemas/financialfacility'
+        CorporateActionProcedureEmployeeReference:
+          $ref: '#/components/schemas/involvedparty'
+        CorporateActionProcedureCustomerReference:
+          $ref: '#/components/schemas/involvedparty'
+        CorporateActionProcedureType:
+          $ref: '#/components/schemas/proceduretype'
+        CorporateActionProcedureServiceProviderSchedule:
+          $ref: '#/components/schemas/schedule'
+        CorporateActionProcedureServiceType:
+          $ref: '#/components/schemas/servicetype'
+        CorporateActionProcedureProductandServiceType:
+          type: string
+          description: A Classification value that distinguishes between the type of products/services related to Corporate Action Procedure
+          format: bankingproducttype
+        CorporateActionProcedureProductandServiceInstance:
+          $ref: '#/components/schemas/bankingproduct'
+        CorporateActionProcedureTransactionType:
+          type: string
+          description: A Classification value that distinguishes between the type of transactions in Corporate Action Procedure
+          format: transactiontype
+        CorporateActionProcedureTransaction:
+          $ref: '#/components/schemas/transaction'
+        CorporateActionProcedureFinancialTransactionArrangement:
+          $ref: '#/components/schemas/arrangement'
+        CorporateActionProcedureCustomerAgreementReference:
+          $ref: '#/components/schemas/agreement'
+        CorporateActionProcedureReference:
+          $ref: '#/components/schemas/procedure'
+      description: 'Complete work tasks following a defined procedure in support of general office activities and product and service delivery within Corporate Action. '
+    ControlCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Control Corporate Action Procedure'
+    ControlCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Control Corporate Action Procedure'
+    ExchangeCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Exchange Corporate Action Procedure'
+    ExchangeCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Exchange Corporate Action Procedure'
+    ExecuteCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Execute Corporate Action Procedure'
+    ExecuteCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Execute Corporate Action Procedure'
+    InitiateCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Initiate Corporate Action Procedure'
+    InitiateCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Initiate Corporate Action Procedure'
+    NotifyCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Notify Corporate Action Procedure'
+    NotifyCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Notify Corporate Action Procedure'
+    RequestCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Request Corporate Action Procedure'
+    RequestCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Request Corporate Action Procedure'
+    RetrieveCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Retrieve Corporate Action Procedure'
+    RetrieveCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Retrieve Corporate Action Procedure'
+    UpdateCorporateActionProcedureRequest:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Input: Update Corporate Action Procedure'
+    UpdateCorporateActionProcedureResponse:
+      type: object
+      properties:
+        CorporateActionProcedure:
+          type: object
+          properties:
+            CorporateActionProcedureParameterType:
+              $ref: '#/components/schemas/text'
+            CorporateActionProcedureSelectedOption:
+              $ref: '#/components/schemas/feature'
+            CorporateActionProcedureRequest:
+              $ref: '#/components/schemas/instruction'
+            CorporateActionProcedureSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureStatus:
+              $ref: '#/components/schemas/status'
+            CorporateActionProcedureAssociatedPartyReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureBusinessUnitReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureServiceProviderReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureFinancialFacilityReference:
+              $ref: '#/components/schemas/financialfacility'
+            CorporateActionProcedureEmployeeReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureCustomerReference:
+              $ref: '#/components/schemas/involvedparty'
+            CorporateActionProcedureType:
+              $ref: '#/components/schemas/proceduretype'
+            CorporateActionProcedureServiceProviderSchedule:
+              $ref: '#/components/schemas/schedule'
+            CorporateActionProcedureServiceType:
+              $ref: '#/components/schemas/servicetype'
+            CorporateActionProcedureProductandServiceType:
+              type: string
+              description: "\n"
+              format: bankingproducttype
+            CorporateActionProcedureProductandServiceInstance:
+              $ref: '#/components/schemas/bankingproduct'
+            CorporateActionProcedureTransactionType:
+              type: string
+              description: "\n"
+              format: transactiontype
+            CorporateActionProcedureFinancialTransactionArrangement:
+              $ref: '#/components/schemas/arrangement'
+            CorporateActionProcedureCustomerAgreementReference:
+              $ref: '#/components/schemas/agreement'
+            CorporateActionProcedureReference:
+              $ref: '#/components/schemas/procedure'
+      description: 'Output: Update Corporate Action Procedure'
+  responses:
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    Forbidden:
+      description: Forbidden
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    NotFound:
+      description: NotFound
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    TooManyRequests:
+      description: TooManyRequests
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    InternalServerError:
+      description: InternalServerError
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/HTTPError'
+    ControlCorporateActionProcedureResponse:
+      description: ControlCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlCorporateActionProcedureResponse'
+    ExchangeCorporateActionProcedureResponse:
+      description: ExchangeCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeCorporateActionProcedureResponse'
+    ExecuteCorporateActionProcedureResponse:
+      description: ExecuteCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteCorporateActionProcedureResponse'
+    InitiateCorporateActionProcedureResponse:
+      description: InitiateCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateCorporateActionProcedureResponse'
+    NotifyCorporateActionProcedureResponse:
+      description: NotifyCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/NotifyCorporateActionProcedureResponse'
+    RequestCorporateActionProcedureResponse:
+      description: RequestCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestCorporateActionProcedureResponse'
+    RetrieveCorporateActionProcedureResponse:
+      description: RetrieveCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RetrieveCorporateActionProcedureResponse'
+    UpdateCorporateActionProcedureResponse:
+      description: UpdateCorporateActionProcedureResponse
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateCorporateActionProcedureResponse'
+    SecurityDividendPaymentWorkstep:
+      description: SecurityDividendPaymentWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityDividendPaymentWorkstep'
+    SecurityMergersandAcquisitionActionWorkstep:
+      description: SecurityMergersandAcquisitionActionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityMergersandAcquisitionActionWorkstep'
+    SecurityRightsIssueActionWorkstep:
+      description: SecurityRightsIssueActionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityRightsIssueActionWorkstep'
+    SecuritySpin-OffActionWorkstep:
+      description: SecuritySpin-OffActionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecuritySpin-OffActionWorkstep'
+    StockSplitorReversalActionWorkstep:
+      description: StockSplitorReversalActionWorkstep
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StockSplitorReversalActionWorkstep'
+  parameters:
+    corporateactionid:
+      name: corporateactionid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    securitydividendpaymentworkstepid:
+      name: securitydividendpaymentworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    securitymergersandacquisitionactionworkstepid:
+      name: securitymergersandacquisitionactionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    securityrightsissueactionworkstepid:
+      name: securityrightsissueactionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    securityspin-offactionworkstepid:
+      name: securityspin-offactionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+    stocksplitorreversalactionworkstepid:
+      name: stocksplitorreversalactionworkstepid
+      in: path
+      required: true
+      style: simple
+      schema:
+        type: string
+  requestBodies:
+    ControlCorporateActionProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ControlCorporateActionProcedureRequest'
+      required: true
+    ExchangeCorporateActionProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExchangeCorporateActionProcedureRequest'
+      required: true
+    ExecuteCorporateActionProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ExecuteCorporateActionProcedureRequest'
+      required: true
+    InitiateCorporateActionProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/InitiateCorporateActionProcedureRequest'
+      required: true
+    RequestCorporateActionProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RequestCorporateActionProcedureRequest'
+      required: true
+    UpdateCorporateActionProcedureRequest:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UpdateCorporateActionProcedureRequest'
+      required: true
+    SecurityDividendPaymentWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityDividendPaymentWorkstep'
+      required: true
+    SecurityMergersandAcquisitionActionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityMergersandAcquisitionActionWorkstep'
+      required: true
+    SecurityRightsIssueActionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecurityRightsIssueActionWorkstep'
+      required: true
+    SecuritySpin-OffActionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/SecuritySpin-OffActionWorkstep'
+      required: true
+    StockSplitorReversalActionWorkstep:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/StockSplitorReversalActionWorkstep'
+      required: true
