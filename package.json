@@ -1,0 +1,40 @@
+{
+  "name": "bian2context",
+  "version": "0.1.0",
+  "description": "CLI tool to parse multiple OpenAPI (YAML/JSON) files from BIAN and generate a compact summary for Domain-Driven Design (DDD) analysis. It extracts Service Domains, Entities, and Domain Events, with optional abbreviation compression to reduce token size for LLM prompts.",
+  "bin": {
+    "dir2context": "./index.js"
+  },
+  "keywords": [
+    "llm",
+    "context",
+    "cli",
+    "code",
+    "source",
+    "tools",
+    "prompt",
+    "ai",
+    "bian",
+    "yaml"
+  ],
+  "author": "Enrique Ismael Mendoza Robaina",
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enrimr/bian2context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/enrimr/bian2context/issues"
+  },
+  "homepage": "https://github.com/enrimr/bian2context#readme",
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5"
+  }
+}
