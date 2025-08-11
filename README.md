@@ -5,9 +5,11 @@ It extracts Service Domains, Entities, and Domain Events, with optional abbrevia
 
 [![npm version](https://img.shields.io/npm/v/bian2context.svg)](https://www.npmjs.com/package/bian2context)
 [![License](https://img.shields.io/npm/l/bian2context.svg)](LICENSE)
-[![Node.js](https://img.shields.io/badge/node-%3E%3D14-green.svg)](https://nodejs.org/)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D16-green.svg)](https://nodejs.org/)
 
----
+BIAN YAML and JSON files are available from the official repository. [https://github.com/bian-official/public](https://github.com/bian-official/public)
+
+
 
 ## Features
 
